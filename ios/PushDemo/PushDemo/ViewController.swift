@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "drawAShape:", name: Names.actionOnePressed, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "localNotificationActionOnePressed:", name: Names.actionOnePressed, object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showAMessage:", name: Names.actionTwoPressed, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "localNotificationActionTwoPressed:", name: Names.actionTwoPressed, object: nil)
         
         
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         let calendar = NSCalendar.currentCalendar()
         let date = calendar.dateByAddingUnit(.CalendarUnitSecond, value: 10, toDate: NSDate(), options: nil)
         
@@ -28,8 +33,6 @@ class ViewController: UIViewController {
         notification.category = Names.firstCategoryIdentifier
         notification.alertBody = "HI, I'm a notification"
         notification.fireDate = date
-        notification.alertAction = "View detail"
-        notification.alertTitle = "Push notification demo"
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
         
@@ -41,20 +44,14 @@ class ViewController: UIViewController {
         // get current setting
         let setting = UIApplication.sharedApplication().currentUserNotificationSettings()
         println(Functions.notificationStatus())
-        
     }
     
-    func drawAShape(notification:NSNotification){
-        var view:UIView = UIView(frame: CGRectMake(10, 10, 100, 100))
-        view.backgroundColor = UIColor.redColor()
-        
-        self.view.addSubview(view)
+    func localNotificationActionOnePressed(notification:NSNotification){
+        label.text = "Action one pressed"
     }
     
-    func showAMessage(notification:NSNotification){
-        var message:UIAlertController = UIAlertController(title: "A Notification Meaasge", message: "Hello", preferredStyle: UIAlertControllerStyle.Alert)
-        message.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(message, animated: true, completion: nil)
+    func localNotificationActionTwoPressed(notification:NSNotification){
+        label.text = "Action two pressed"
     }
     
     
