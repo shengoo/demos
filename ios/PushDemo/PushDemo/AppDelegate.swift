@@ -22,8 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         firstAction.identifier = Names.firstActionIdentifier
         firstAction.title = Names.firstActionTitle
         
+        // run app in background
         firstAction.activationMode = UIUserNotificationActivationMode.Background
+        // if set true, button will be red on lockscreen
         firstAction.destructive = true
+        // will be true if activationMode set to Foreground
         firstAction.authenticationRequired = false
         
         
@@ -50,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var firstCategory:UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
         firstCategory.identifier = Names.firstCategoryIdentifier
         
+        
         let defaultActions:NSArray = [firstAction,secondAction,thirdAction]
         let minimalActions:NSArray = [firstAction,secondAction]
         
@@ -73,6 +77,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        println("didReceiveLocalNotification : " + notification.description)
+    }
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        println("didReceiveRemoteNotification : " + userInfo.description)
+    }
+    
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
         if(identifier == Names.firstActionIdentifier){
             
@@ -90,9 +101,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // token can change, need to register every time it launched
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         println(deviceToken)
+        var characterSet:NSCharacterSet = NSCharacterSet(charactersInString: "<>")
+        var deviceTokenString = (deviceToken.description as NSString).stringByTrimmingCharactersInSet(characterSet)
+                                .stringByReplacingOccurrencesOfString(" ", withString: " ", options: nil, range: nil)
+        println(deviceTokenString)
+        
     }
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        println(error)
+        println(error.localizedDescription)
     }
 
     func applicationWillResignActive(application: UIApplication) {

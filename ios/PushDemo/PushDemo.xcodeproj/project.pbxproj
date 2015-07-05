@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04172C8E1B46709700E3D3D6 /* notification-beep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "notification-beep.caf"; path = "../../../../../../Music/notification-beep.caf"; sourceTree = "<group>"; };
 		0469BFBC1B4386970046BE88 /* PushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0469BFC01B4386970046BE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0469BFC11B4386970046BE88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		0469BFBE1B4386970046BE88 /* PushDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04172C8E1B46709700E3D3D6 /* notification-beep.caf */,
 				0469BFC11B4386970046BE88 /* AppDelegate.swift */,
 				0469BFC31B4386970046BE88 /* ViewController.swift */,
 				0469BFC51B4386970046BE88 /* Main.storyboard */,
@@ -351,13 +353,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: TR Team (ZH4R33CGBS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PushDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "06669c1d-56e5-4729-a77a-2686d1c86aed";
 			};
 			name = Debug;
 		};
@@ -365,13 +367,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: TR Team (ZH4R33CGBS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PushDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "06669c1d-56e5-4729-a77a-2686d1c86aed";
 			};
 			name = Release;
 		};
