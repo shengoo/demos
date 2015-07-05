@@ -31,9 +31,12 @@ class ViewController: UIViewController {
         
         var notification:UILocalNotification = UILocalNotification()
         notification.category = Names.firstCategoryIdentifier
+        // will add an action on alert style
+        notification.alertAction = "alertAction"
         notification.alertBody = "HI, I'm a notification"
         notification.fireDate = date
-        notification.soundName = UILocalNotificationDefaultSoundName
+        //notification.soundName = UILocalNotificationDefaultSoundName
+        notification.soundName = "notification-beep.caf"
         notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
         
         
