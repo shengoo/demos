@@ -363,8 +363,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: TR Team (ZH4R33CGBS)";
+=======
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+>>>>>>> b010682e8c63cf16c78252f9166d60e2552db1ae
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = PushDemo/Info.plist;
@@ -375,9 +379,13 @@
 					"$(PROJECT_DIR)/PushDemo/UMessage_Sdk_1.1.0",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				PROVISIONING_PROFILE = "06669c1d-56e5-4729-a77a-2686d1c86aed";
 				SWIFT_OBJC_BRIDGING_HEADER = "PushDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+=======
+				PROVISIONING_PROFILE = "00024e55-fd65-4841-aacf-9ea9b35b14fa";
+>>>>>>> b010682e8c63cf16c78252f9166d60e2552db1ae
 			};
 			name = Debug;
 		};
@@ -385,8 +393,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: TR Team (ZH4R33CGBS)";
+=======
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+>>>>>>> b010682e8c63cf16c78252f9166d60e2552db1ae
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = PushDemo/Info.plist;
@@ -397,8 +409,12 @@
 					"$(PROJECT_DIR)/PushDemo/UMessage_Sdk_1.1.0",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				PROVISIONING_PROFILE = "06669c1d-56e5-4729-a77a-2686d1c86aed";
 				SWIFT_OBJC_BRIDGING_HEADER = "PushDemo-Bridging-Header.h";
+=======
+				PROVISIONING_PROFILE = "00024e55-fd65-4841-aacf-9ea9b35b14fa";
+>>>>>>> b010682e8c63cf16c78252f9166d60e2552db1ae
 			};
 			name = Release;
 		};
