@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UMessage.startWithAppkey("55a38bfb67e58e356400140e", launchOptions: launchOptions);
         
         
         var firstAction:UIMutableUserNotificationAction = UIMutableUserNotificationAction()
@@ -82,9 +87,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         println("didReceiveRemoteNotification : " + userInfo.description)
+        UMessage.didReceiveRemoteNotification(userInfo)
     }
     
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        println("handleActionWithIdentifier forLocalNotification : " + notification.description)
         if(identifier == Names.firstActionIdentifier){
             
             NSNotificationCenter.defaultCenter().postNotificationName(Names.actionOnePressed, object: nil)
@@ -97,14 +104,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         completionHandler()
     }
     
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        println("handleActionWithIdentifier forRemoteNotification : " + userInfo.description)
+        completionHandler()
+    }
+    
     
     // token can change, need to register every time it launched
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         println(deviceToken)
         var characterSet:NSCharacterSet = NSCharacterSet(charactersInString: "<>")
         var deviceTokenString = (deviceToken.description as NSString).stringByTrimmingCharactersInSet(characterSet)
-                                .stringByReplacingOccurrencesOfString(" ", withString: " ", options: nil, range: nil)
+                                .stringByReplacingOccurrencesOfString(" ", withString: "", options: nil, range: nil)
         println(deviceTokenString)
+        UMessage.registerDeviceToken(deviceToken)
         
     }
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {

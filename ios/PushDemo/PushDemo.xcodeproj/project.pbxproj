@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040449211B54ACA4001C296E /* libUMessage_Sdk_1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 040449201B54ACA4001C296E /* libUMessage_Sdk_1.1.0.a */; };
 		0469BFC21B4386970046BE88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469BFC11B4386970046BE88 /* AppDelegate.swift */; };
 		0469BFC41B4386970046BE88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469BFC31B4386970046BE88 /* ViewController.swift */; };
 		0469BFC71B4386970046BE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0469BFC51B4386970046BE88 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		0469BFD81B4386970046BE88 /* PushDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469BFD71B4386970046BE88 /* PushDemoTests.swift */; };
 		0469BFE21B43B21D0046BE88 /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469BFE11B43B21D0046BE88 /* Names.swift */; };
 		0469BFE41B43D89E0046BE88 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469BFE31B43D89E0046BE88 /* Functions.swift */; };
+		04F5453A1B4CFEB8009EF4BA /* UMessage_Sdk_1.1.0 in Resources */ = {isa = PBXBuildFile; fileRef = 04F545391B4CFEB8009EF4BA /* UMessage_Sdk_1.1.0 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040449201B54ACA4001C296E /* libUMessage_Sdk_1.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUMessage_Sdk_1.1.0.a; path = PushDemo/UMessage_Sdk_1.1.0/libUMessage_Sdk_1.1.0.a; sourceTree = "<group>"; };
 		04172C8E1B46709700E3D3D6 /* notification-beep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "notification-beep.caf"; path = "../../../../../../Music/notification-beep.caf"; sourceTree = "<group>"; };
 		0469BFBC1B4386970046BE88 /* PushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0469BFC01B4386970046BE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +44,8 @@
 		0469BFD71B4386970046BE88 /* PushDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDemoTests.swift; sourceTree = "<group>"; };
 		0469BFE11B43B21D0046BE88 /* Names.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
 		0469BFE31B43D89E0046BE88 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		04F545391B4CFEB8009EF4BA /* UMessage_Sdk_1.1.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UMessage_Sdk_1.1.0; sourceTree = "<group>"; };
+		04F5453D1B539E22009EF4BA /* PushDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PushDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040449211B54ACA4001C296E /* libUMessage_Sdk_1.1.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,9 +70,11 @@
 		0469BFB31B4386970046BE88 = {
 			isa = PBXGroup;
 			children = (
+				040449201B54ACA4001C296E /* libUMessage_Sdk_1.1.0.a */,
 				0469BFBE1B4386970046BE88 /* PushDemo */,
 				0469BFD41B4386970046BE88 /* PushDemoTests */,
 				0469BFBD1B4386970046BE88 /* Products */,
+				04F5453D1B539E22009EF4BA /* PushDemo-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +90,7 @@
 		0469BFBE1B4386970046BE88 /* PushDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04F545391B4CFEB8009EF4BA /* UMessage_Sdk_1.1.0 */,
 				04172C8E1B46709700E3D3D6 /* notification-beep.caf */,
 				0469BFC11B4386970046BE88 /* AppDelegate.swift */,
 				0469BFC31B4386970046BE88 /* ViewController.swift */,
@@ -203,6 +212,7 @@
 			files = (
 				0469BFC71B4386970046BE88 /* Main.storyboard in Resources */,
 				0469BFCC1B4386970046BE88 /* LaunchScreen.xib in Resources */,
+				04F5453A1B4CFEB8009EF4BA /* UMessage_Sdk_1.1.0 in Resources */,
 				0469BFC91B4386970046BE88 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,13 +363,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: TR Team (ZH4R33CGBS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = PushDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PushDemo/UMessage_Sdk_1.1.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "06669c1d-56e5-4729-a77a-2686d1c86aed";
+				SWIFT_OBJC_BRIDGING_HEADER = "PushDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -367,13 +385,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: TR Team (ZH4R33CGBS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = PushDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PushDemo/UMessage_Sdk_1.1.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "06669c1d-56e5-4729-a77a-2686d1c86aed";
+				SWIFT_OBJC_BRIDGING_HEADER = "PushDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
