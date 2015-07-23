@@ -20,8 +20,21 @@
     // Override point for customization after application launch.
     
     [UMSocialData setAppKey:@"55b054cce0f55a08820008df"];
+//    [UMSocialWechatHandler setWXAppId:@"wx01f19da315b13687" appSecret:@"75144b5e0f9f19ed8c4ff7665e623c33" url:@"http://www.umeng.com/social"];
     
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return  [UMSocialSnsService handleOpenURL:url];
+}
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return  [UMSocialSnsService handleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
