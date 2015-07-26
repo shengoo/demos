@@ -12,10 +12,72 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var splashView: UIImageView?;
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window?.makeKeyAndVisible()
+        
+        splashView = UIImageView(frame: UIScreen.mainScreen().bounds)
+//        splashView?.image = UIImage(named: "载入动画-图片")
+        
+        var background = UIImageView(frame: UIScreen.mainScreen().bounds)
+        background.image = UIImage(named: "载入动画-图片")
+        splashView?.addSubview(background)
+        
+        window?.addSubview(splashView!)
+        window?.bringSubviewToFront(splashView!)
+        
+        
+        var wordx = UIScreen.mainScreen().bounds.width / 4;
+        var wordy = UIScreen.mainScreen().bounds.height / 4;
+        var wordw = UIScreen.mainScreen().bounds.width / 2;
+        var wordh = UIScreen.mainScreen().bounds.height / 2;
+        
+        var word = UIImageView(frame: CGRectMake(wordx, wordy, wordw, wordh))
+        word.image = UIImage(named: "logo")
+        word.alpha = 0
+        splashView?.addSubview(word)
+        
+        
+        
+        UIView.animateWithDuration(2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn,
+            animations: {
+                background.transform = CGAffineTransformMakeScale(1.1, 1.1)
+            },
+            completion: { _ in
+                
+            }
+        )
+        UIView.animateWithDuration(2, delay: 2, options: .CurveLinear,
+            animations: {
+                background.transform = CGAffineTransformMakeScale(1, 1)
+            },
+            completion: { _ in
+                
+            }
+        )
+        
+        UIView.animateWithDuration(2, delay: 1, options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                word.alpha = 1
+            },
+            completion: { _ in
+                
+            }
+        );
+        
+        UIView.animateWithDuration(1.2, delay: 4, options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                splashView?.transform = CGAffineTransformMakeTranslation(-UIScreen.mainScreen().bounds.width, 0)
+            },
+            completion: { _ in
+                splashView?.removeFromSuperview()
+            }
+        );
+        
         
         var tabBarController = self.window?.rootViewController as! UITabBarController
         
@@ -36,6 +98,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         return true
+    }
+    
+    func showWord(){
+        var word = UIImageView(frame: CGRectMake(75, 440, 170, 29))
+        word.image = UIImage(named: "logo")
+        splashView?.addSubview(word)
+        word.alpha = 0
+        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: {
+            word.alpha = 1.0
+            },
+            completion: nil
+        );
     }
 
     func applicationWillResignActive(application: UIApplication) {

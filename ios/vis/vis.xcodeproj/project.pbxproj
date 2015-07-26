@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		049C19371B5D39DE0031A77A /* vis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		049C19371B5D39DE0031A77A /* 微爱视.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微爱视.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C193B1B5D39DE0031A77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049C193C1B5D39DE0031A77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049C193E1B5D39DE0031A77A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		049C19381B5D39DE0031A77A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				049C19371B5D39DE0031A77A /* vis.app */,
+				049C19371B5D39DE0031A77A /* 微爱视.app */,
 				049C194E1B5D39DE0031A77A /* visTests.xctest */,
 			);
 			name = Products;
@@ -132,7 +132,7 @@
 			);
 			name = vis;
 			productName = vis;
-			productReference = 049C19371B5D39DE0031A77A /* vis.app */;
+			productReference = 049C19371B5D39DE0031A77A /* 微爱视.app */;
 			productType = "com.apple.product-type.application";
 		};
 		049C194D1B5D39DE0031A77A /* visTests */ = {
@@ -345,11 +345,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = vis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "微爱视";
 			};
 			name = Debug;
 		};
@@ -357,11 +358,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = vis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "微爱视";
 			};
 			name = Release;
 		};
@@ -418,6 +420,7 @@
 				049C195A1B5D39DE0031A77A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		049C195B1B5D39DE0031A77A /* Build configuration list for PBXNativeTarget "visTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +429,7 @@
 				049C195D1B5D39DE0031A77A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
