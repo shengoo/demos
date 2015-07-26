@@ -100,17 +100,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func showWord(){
-        var word = UIImageView(frame: CGRectMake(75, 440, 170, 29))
-        word.image = UIImage(named: "logo")
-        splashView?.addSubview(word)
-        word.alpha = 0
-        UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: {
-            word.alpha = 1.0
-            },
-            completion: nil
-        );
-    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
