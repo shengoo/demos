@@ -20,63 +20,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
-        splashView = UIImageView(frame: UIScreen.mainScreen().bounds)
-//        splashView?.image = UIImage(named: "载入动画-图片")
-        
-        var background = UIImageView(frame: UIScreen.mainScreen().bounds)
-        background.image = UIImage(named: "载入动画-图片")
-        splashView?.addSubview(background)
-        
-        window?.addSubview(splashView!)
-        window?.bringSubviewToFront(splashView!)
-        
-        
-        var wordx = UIScreen.mainScreen().bounds.width / 4;
-        var wordy = UIScreen.mainScreen().bounds.height / 4;
-        var wordw = UIScreen.mainScreen().bounds.width / 2;
-        var wordh = UIScreen.mainScreen().bounds.height / 2;
-        
-        var word = UIImageView(frame: CGRectMake(wordx, wordy, wordw, wordh))
-        word.image = UIImage(named: "logo")
-        word.alpha = 0
-        splashView?.addSubview(word)
-        
-        
-        
-        UIView.animateWithDuration(2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn,
-            animations: {
-                background.transform = CGAffineTransformMakeScale(1.1, 1.1)
-            },
-            completion: { _ in
-                
-            }
-        )
-        UIView.animateWithDuration(2, delay: 2, options: .CurveLinear,
-            animations: {
-                background.transform = CGAffineTransformMakeScale(1, 1)
-            },
-            completion: { _ in
-                
-            }
-        )
-        
-        UIView.animateWithDuration(2, delay: 1, options: UIViewAnimationOptions.CurveLinear,
-            animations: {
-                word.alpha = 1
-            },
-            completion: { _ in
-                
-            }
-        );
-        
-        UIView.animateWithDuration(1.2, delay: 4, options: UIViewAnimationOptions.CurveLinear,
-            animations: {
-                splashView?.transform = CGAffineTransformMakeTranslation(-UIScreen.mainScreen().bounds.width, 0)
-            },
-            completion: { _ in
-                splashView?.removeFromSuperview()
-            }
-        );
+//        splashView = UIImageView(frame: UIScreen.mainScreen().bounds)
+//        
+//        var background = UIImageView(frame: UIScreen.mainScreen().bounds)
+//        background.image = UIImage(named: "载入动画-图片")
+//        splashView?.addSubview(background)
+//        
+//        window?.addSubview(splashView!)
+//        window?.bringSubviewToFront(splashView!)
+//        
+//        
+//        var wordx = UIScreen.mainScreen().bounds.width / 4;
+//        var wordy = UIScreen.mainScreen().bounds.height / 4;
+//        var wordw = UIScreen.mainScreen().bounds.width / 2;
+//        var wordh = UIScreen.mainScreen().bounds.height / 2;
+//        
+//        var word = UIImageView(frame: CGRectMake(wordx, wordy, wordw, wordh))
+//        word.image = UIImage(named: "logo")
+//        word.alpha = 0
+//        splashView?.addSubview(word)
+//        
+//        
+//        
+//        UIView.animateWithDuration(2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn,
+//            animations: {
+//                background.transform = CGAffineTransformMakeScale(1.1, 1.1)
+//            },
+//            completion: { _ in
+//                
+//            }
+//        )
+//        UIView.animateWithDuration(2, delay: 2, options: .CurveLinear,
+//            animations: {
+//                background.transform = CGAffineTransformMakeScale(1, 1)
+//            },
+//            completion: { _ in
+//                
+//            }
+//        )
+//        
+//        UIView.animateWithDuration(2, delay: 1, options: UIViewAnimationOptions.CurveLinear,
+//            animations: {
+//                word.alpha = 1
+//            },
+//            completion: { _ in
+//                
+//            }
+//        );
+//        
+//        UIView.animateWithDuration(1.2, delay: 4, options: UIViewAnimationOptions.CurveLinear,
+//            animations: {
+//                splashView?.transform = CGAffineTransformMakeTranslation(-UIScreen.mainScreen().bounds.width, 0)
+//            },
+//            completion: { _ in
+//                splashView?.removeFromSuperview()
+//            }
+//        );
         
         
         var tabBarController = self.window?.rootViewController as! UITabBarController
