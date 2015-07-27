@@ -10,10 +10,10 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LeG-c5-kz7" customClass="MovieTableViewCell" customModule="vis" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="180" height="111"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LeG-c5-kz7" id="egM-gK-0Cd">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="LeG-c5-kz7" id="egM-gK-0Cd">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hYK-dj-nQO">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hYK-dj-nQO">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="110.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRc-G7-ZBK">
