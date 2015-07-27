@@ -13,9 +13,17 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var imageview: UIImageView!
     @IBOutlet weak var label: UILabel!
     
-    func loadItem(title: String, image: String) {
+    func loadItem(title: String, image: String, category:String) {
         imageview.image = UIImage(named: image)
-        label.text = title
+        
+        var textString = title + "  -" + category
+
+        var txt = NSMutableAttributedString(string: textString)
+        txt.addAttribute(NSForegroundColorAttributeName, value: UIColor.lightGrayColor(), range: NSMakeRange(count(title), count(textString) - count(title)))
+        txt.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(13), range: NSMakeRange(count(title), count(textString) - count(title)))
+        
+        label.attributedText = txt
+
     }
     
     

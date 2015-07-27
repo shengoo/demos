@@ -14,6 +14,10 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     
     var items: [String] = ["We", "Heart", "Swift"]
     
+    var movies = [Movie]()
+    
+    var service:MovieService!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,37 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
         var nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
         
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
+        
+        
+        service = MovieService()
+        service.getAll({
+            (response) in
+            self.loadMovies(response)
+        })
+        
     }
+    
+    
+    func loadMovies(movies:NSArray){
+        for movie in movies {
+            println(movie["title"])
+            var id = movie["id"] as! Int
+            var title = movie["title"] as! String
+            var description = movie["description"] as! String
+            var date = movie["date"] as! String
+            var category = movie["category"] as! String
+            var length = movie["length"] as! Int
+            var image = movie["image"] as! String
+            var video = movie["video"] as! String
+            var dataItem = Movie(id: id, title: title, desc: description, date: date, category: category, length: length, image: image, video: video)
+            self.movies.append(dataItem)
+        }
+        dispatch_async(dispatch_get_main_queue(), {
+            self.tableView.reloadData()
+        })
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,7 +66,7 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return movies.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -46,9 +80,9 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
         
         // this is how you extract values from a tuple
 //        var (title, image) = items[indexPath.row]
-        var title = items[indexPath.row]
+        var movie = movies[indexPath.row]
         
-        cell.loadItem(title, image: "图1")
+        cell.loadItem(movie.title, image: "图1",category: movie.category)
         
         return cell
         
