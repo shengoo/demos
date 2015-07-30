@@ -22,6 +22,12 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//        UIBarButtonItem(image: UIImage(named: "设置"), style: UIBarButtonItemStyle.Plain, target: self, action: "")
+        
+        
+        let addButton = UIBarButtonItem(image: UIImage(named: "设置"), style: UIBarButtonItemStyle.Plain, target: self, action: "insertNewObject:")
+        self.navigationItem.rightBarButtonItem = addButton
+        
 
 //        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         var nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
@@ -70,11 +76,7 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
-        
-//        var imageview = UIImageView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.width * 3 / 4))
-//        imageview.image = UIImage(named: "图1")
-//        cell.contentView.addSubview(imageview)
+
         
         var cell:MovieTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! MovieTableViewCell
         
@@ -82,15 +84,12 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
 //        var (title, image) = items[indexPath.row]
         var movie = movies[indexPath.row]
         
-        cell.loadItem(movie.title, image: "图1",category: movie.category)
+        cell.loadItem(movie.title, image: movie.image,category: movie.category)
         
         return cell
         
     }
     
-//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        return CGFloat(UIScreen.mainScreen().bounds.width)
-//    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println(indexPath)

@@ -14,7 +14,22 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     
     func loadItem(title: String, image: String, category:String) {
-        imageview.image = UIImage(named: image)
+//        imageview.image = UIImage(named: image)
+        var url = NSURL(string: "http://182.92.153.230/file/" + image)
+        println(url)
+//        var data = NSData(contentsOfURL: url!)
+//        var image = UIImage(data: data!)
+//        imageview.image = image
+        
+//        var loader = AsyncImageLoader()
+//        loader.loadImageWithURL(url, target: imageview.image, action: "action")
+        
+        NSURLConnection.sendAsynchronousRequest(NSURLRequest(URL: url!),
+            queue: NSOperationQueue.mainQueue(),
+            completionHandler: {
+            (response,data,error) in
+                self.imageview.image = UIImage(data: data)
+            })
         
         var textString = title + "  -" + category
 
@@ -24,6 +39,10 @@ class MovieTableViewCell: UITableViewCell {
         
         label.attributedText = txt
 
+    }
+    
+    func action(){
+        
     }
     
     
