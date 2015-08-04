@@ -31,7 +31,6 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         self.navigationItem.rightBarButtonItem = rightButton
         
         
-//        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "catecollcell")
         
         var flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSizeMake((UIScreen.mainScreen().bounds.width / 2) - 1, (UIScreen.mainScreen().bounds.width / 2) - 1)
@@ -94,10 +93,7 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         var str = "http://182.92.153.230/file/" + category.image
         var url = NSURL(string: str.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
-//        var data = NSData(contentsOfURL: url!)
-//        var image = UIImage(data: data!)
         cell.image.sd_setImageWithURL(url)
-//        cell.image.image = image
         cell.label.text = category.name
 
         return cell;

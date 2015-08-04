@@ -12,14 +12,17 @@ class MovieService {
     
     
     var settings:Settings
+    var manager:AFHTTPRequestOperationManager
     
     
     init(){
         self.settings = Settings()
+        self.manager = AFHTTPRequestOperationManager()
+        manager.requestSerializer = AFJSONRequestSerializer()
+        manager.responseSerializer = AFJSONResponseSerializer()
     }
     
     func getAll(callback:(NSArray)->()){
-        println("get all")
         request(settings.all, callback: callback)
     }
     
@@ -29,14 +32,26 @@ class MovieService {
     
     func request(url:String,callback:(NSArray)->()){
         var nsurl = NSURL(string: url)
-        println(callback)
-        let task = NSURLSession.sharedSession().dataTaskWithURL(nsurl!, completionHandler: {
-            (data,response,error) in
-            var error:NSError?
-            var response = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSArray
-            callback(response)
-        })
-        task.resume()
+        
+        manager.GET(url,
+            parameters: nil,
+            success: { (oper, data) -> Void in
+                print(data)
+                callback(data as! NSArray)
+            },
+            failure: { (opeation, error) -> Void in
+                println(error)
+            }
+        )
+        
+//        println(callback)
+//        let task = NSURLSession.sharedSession().dataTaskWithURL(nsurl!, completionHandler: {
+//            (data,response,error) in
+//            var error:NSError?
+//            var response = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSArray
+//            callback(response)
+//        })
+//        task.resume()
     }
     
 }

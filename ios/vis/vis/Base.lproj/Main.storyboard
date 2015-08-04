@@ -75,7 +75,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5d0-iR-BDg">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="5d0-iR-BDg">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -137,7 +137,7 @@
         <scene sceneID="n5n-qY-XaI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t6s-Mt-egS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="每日精选（未选中）" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LZO-3H-Q8K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -156,7 +156,7 @@
         <scene sceneID="VlX-gh-fpk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K2O-5l-e4B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="视频分类（选中）" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5kQ-Eg-Bdb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -172,9 +172,5 @@
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="每日精选（未选中）" width="59" height="14"/>
-        <image name="视频分类（选中）" width="59" height="14"/>
-    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

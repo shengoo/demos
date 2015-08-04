@@ -32,11 +32,11 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
         
         
 
-//        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         var nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
         
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
-        
+
+
         
         service = MovieService()
         service.getAll({
@@ -90,8 +90,6 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
         
         var cell:MovieTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! MovieTableViewCell
         
-        // this is how you extract values from a tuple
-//        var (title, image) = items[indexPath.row]
         var movie = movies[indexPath.row]
         
         cell.loadItem(movie.title, image: movie.image,category: movie.category)
