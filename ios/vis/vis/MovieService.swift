@@ -23,6 +23,10 @@ class MovieService {
         request(settings.all, callback: callback)
     }
     
+    func getCategory(callback:(NSArray)->()){
+        request(settings.category, callback: callback)
+    }
+    
     func request(url:String,callback:(NSArray)->()){
         var nsurl = NSURL(string: url)
         println(callback)

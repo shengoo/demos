@@ -18,6 +18,9 @@
 		047FF60D1B65DDA1004E1209 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF60C1B65DDA1004E1209 /* MovieService.swift */; };
 		047FF60F1B65E000004E1209 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF60E1B65E000004E1209 /* Movie.swift */; };
 		047FF6431B6A75DC004E1209 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047FF6421B6A75DC004E1209 /* AsyncImageView.m */; };
+		047FF6761B7113A7004E1209 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF6741B7113A7004E1209 /* CategoryCollectionViewCell.swift */; };
+		047FF6771B7113A7004E1209 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047FF6751B7113A7004E1209 /* CategoryCollectionViewCell.xib */; };
+		047FF67A1B711651004E1209 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF6791B711651004E1209 /* Category.swift */; };
 		049C193D1B5D39DE0031A77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C193C1B5D39DE0031A77A /* AppDelegate.swift */; };
 		049C193F1B5D39DE0031A77A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C193E1B5D39DE0031A77A /* FirstViewController.swift */; };
 		049C19411B5D39DE0031A77A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C19401B5D39DE0031A77A /* SecondViewController.swift */; };
@@ -52,6 +55,9 @@
 		047FF6401B6A75DB004E1209 /* vis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vis-Bridging-Header.h"; sourceTree = "<group>"; };
 		047FF6411B6A75DC004E1209 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		047FF6421B6A75DC004E1209 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		047FF6741B7113A7004E1209 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		047FF6751B7113A7004E1209 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		047FF6791B711651004E1209 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		049C19371B5D39DE0031A77A /* vis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C193B1B5D39DE0031A77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049C193C1B5D39DE0031A77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047FF6781B711631004E1209 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				047FF60E1B65E000004E1209 /* Movie.swift */,
+				047FF6791B711651004E1209 /* Category.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		049C192E1B5D39DE0031A77A = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +130,7 @@
 		049C19391B5D39DE0031A77A /* vis */ = {
 			isa = PBXGroup;
 			children = (
+				047FF6781B711631004E1209 /* Model */,
 				049C193C1B5D39DE0031A77A /* AppDelegate.swift */,
 				049C193E1B5D39DE0031A77A /* FirstViewController.swift */,
 				049C19401B5D39DE0031A77A /* SecondViewController.swift */,
@@ -126,10 +142,11 @@
 				047FF5F41B65237F004E1209 /* MovieTableViewCell.xib */,
 				047FF60A1B65DD10004E1209 /* Settings.swift */,
 				047FF60C1B65DDA1004E1209 /* MovieService.swift */,
-				047FF60E1B65E000004E1209 /* Movie.swift */,
 				047FF6411B6A75DC004E1209 /* AsyncImageView.h */,
 				047FF6421B6A75DC004E1209 /* AsyncImageView.m */,
 				047FF6401B6A75DB004E1209 /* vis-Bridging-Header.h */,
+				047FF6741B7113A7004E1209 /* CategoryCollectionViewCell.swift */,
+				047FF6751B7113A7004E1209 /* CategoryCollectionViewCell.xib */,
 			);
 			path = vis;
 			sourceTree = "<group>";
@@ -265,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049C19441B5D39DE0031A77A /* Main.storyboard in Resources */,
+				047FF6771B7113A7004E1209 /* CategoryCollectionViewCell.xib in Resources */,
 				049C19491B5D39DE0031A77A /* LaunchScreen.xib in Resources */,
 				047FF5F51B65237F004E1209 /* MovieTableViewCell.xib in Resources */,
 				049C19461B5D39DE0031A77A /* Images.xcassets in Resources */,
@@ -319,10 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				047FF60F1B65E000004E1209 /* Movie.swift in Sources */,
+				047FF67A1B711651004E1209 /* Category.swift in Sources */,
 				047FF60D1B65DDA1004E1209 /* MovieService.swift in Sources */,
 				049C19411B5D39DE0031A77A /* SecondViewController.swift in Sources */,
 				049C193D1B5D39DE0031A77A /* AppDelegate.swift in Sources */,
 				047FF5F31B6521C0004E1209 /* MovieTableViewCell.swift in Sources */,
+				047FF6761B7113A7004E1209 /* CategoryCollectionViewCell.swift in Sources */,
 				049C193F1B5D39DE0031A77A /* FirstViewController.swift in Sources */,
 				047FF60B1B65DD10004E1209 /* Settings.swift in Sources */,
 				047FF6431B6A75DC004E1209 /* AsyncImageView.m in Sources */,

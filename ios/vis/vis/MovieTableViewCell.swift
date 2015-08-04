@@ -16,7 +16,6 @@ class MovieTableViewCell: UITableViewCell {
     func loadItem(title: String, image: String, category:String) {
 //        imageview.image = UIImage(named: image)
         var url = NSURL(string: "http://182.92.153.230/file/" + image)
-        println(url)
         var data = NSData(contentsOfURL: url!)
         var image = UIImage(data: data!)
         imageview.image = image
