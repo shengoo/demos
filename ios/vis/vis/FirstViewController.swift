@@ -12,7 +12,6 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var tableView: UITableView!
     
-    var items: [String] = ["We", "Heart", "Swift"]
     
     var movies = [Movie]()
     
@@ -21,12 +20,16 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        UIBarButtonItem(image: UIImage(named: "设置"), style: UIBarButtonItemStyle.Plain, target: self, action: "")
+
+        
+        let leftButton = UIBarButtonItem(image: UIImage(named: "navleft"), style: UIBarButtonItemStyle.Plain, target: self, action: "doNothing")
+//        leftButton.enabled = false
+        self.navigationItem.leftBarButtonItem = leftButton
         
         
-        let addButton = UIBarButtonItem(image: UIImage(named: "设置"), style: UIBarButtonItemStyle.Plain, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
+        let rightButton = UIBarButtonItem(image: UIImage(named: "setting"), style: UIBarButtonItemStyle.Plain, target: self, action: "navRightClicked")
+        self.navigationItem.rightBarButtonItem = rightButton
+        
         
 
 //        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -41,6 +44,14 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
             self.loadMovies(response)
         })
         
+    }
+    
+    func doNothing(){
+        println("do nothing")
+    }
+    
+    func navRightClicked(){
+        println("navRightClicked")
     }
     
     

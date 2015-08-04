@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var wordw = UIScreen.mainScreen().bounds.width / 2;
         var wordh = UIScreen.mainScreen().bounds.height / 2;
         
-        var word = UIImageView(frame: CGRectMake(wordx, wordy, wordw, wordh))
-        word.image = UIImage(named: "logo")
+        var word = UIImageView(image: UIImage(named: "logo"))
+        word.center = splashView!.center
         word.alpha = 0
         splashView?.addSubview(word)
         
@@ -81,19 +81,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var tabBarController = self.window?.rootViewController as! UITabBarController
         
         var tabBar = tabBarController.tabBar
-//        tabBar.backgroundImage = UIImage(named: "iconfont-shu")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal).
         
 
         
         let tabItems = tabBarController.tabBar.items as! [UITabBarItem]
         
-        tabItems[0].image = UIImage(named: "每日精选（未选中）")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        tabItems[0].image = UIImage(named: "leftu")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
-        tabItems[0].selectedImage = UIImage(named: "每日精选（选中）")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        tabItems[0].selectedImage = UIImage(named: "lefta")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
-        tabItems[1].image = UIImage(named: "视频分类（未选中）")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        tabItems[1].image = UIImage(named: "rightu")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
 
-        tabItems[1].selectedImage = UIImage(named: "视频分类（选中）")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        tabItems[1].selectedImage = UIImage(named: "righta")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
 
         
         return true
