@@ -16,11 +16,17 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hYK-dj-nQO">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="110.5"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRc-G7-ZBK">
-                        <rect key="frame" x="0.0" y="85" width="180" height="25"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文字底" translatesAutoresizingMaskIntoConstraints="NO" id="69g-66-Ova">
+                        <rect key="frame" x="0.0" y="76" width="180" height="35"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="5Ux-QC-jYY"/>
-                            <constraint firstAttribute="height" constant="25" id="LEd-on-Xcb"/>
+                            <constraint firstAttribute="height" constant="35" id="3Xx-Pv-OC6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRc-G7-ZBK">
+                        <rect key="frame" x="0.0" y="86" width="180" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="LEd-on-Xcb"/>
+                            <constraint firstAttribute="height" constant="25" id="wbG-ug-uqO"/>
                         </constraints>
                         <attributedString key="attributedText">
                             <fragment content="Label">
@@ -42,18 +48,24 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="hYK-dj-nQO" secondAttribute="trailing" id="48e-3I-MDg"/>
                     <constraint firstItem="GRc-G7-ZBK" firstAttribute="bottom" secondItem="egM-gK-0Cd" secondAttribute="bottom" id="9UT-0r-AoK"/>
+                    <constraint firstAttribute="bottom" secondItem="69g-66-Ova" secondAttribute="bottom" id="G4w-pT-iRw"/>
                     <constraint firstAttribute="trailing" secondItem="GRc-G7-ZBK" secondAttribute="trailing" id="Noj-Fw-rlX"/>
                     <constraint firstItem="hYK-dj-nQO" firstAttribute="top" secondItem="egM-gK-0Cd" secondAttribute="top" id="ZLQ-HT-8cL"/>
                     <constraint firstItem="GRc-G7-ZBK" firstAttribute="leading" secondItem="egM-gK-0Cd" secondAttribute="leading" id="gIu-6h-d9e"/>
+                    <constraint firstAttribute="trailing" secondItem="69g-66-Ova" secondAttribute="trailing" id="knq-u6-zLN"/>
                     <constraint firstAttribute="bottom" secondItem="hYK-dj-nQO" secondAttribute="bottom" id="lr3-am-U6b"/>
                     <constraint firstItem="hYK-dj-nQO" firstAttribute="leading" secondItem="egM-gK-0Cd" secondAttribute="leading" id="qIE-mR-bsZ"/>
+                    <constraint firstItem="69g-66-Ova" firstAttribute="leading" secondItem="egM-gK-0Cd" secondAttribute="leading" id="tyy-0A-cvb"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imageview" destination="hYK-dj-nQO" id="SOZ-5p-Kqq"/>
                 <outlet property="label" destination="GRc-G7-ZBK" id="p6H-vM-4WN"/>
             </connections>
-            <point key="canvasLocation" x="353" y="425"/>
+            <point key="canvasLocation" x="353" y="424.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="文字底" width="360" height="33"/>
+    </resources>
 </document>

@@ -43,6 +43,10 @@ class MovieTableViewCell: UITableViewCell {
         txt.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(13), range: NSMakeRange(count(title), count(textString) - count(title)))
         
         label.attributedText = txt
+//        
+//        var labelBg = UIImageView(image: UIImage(named: "文字底"))
+//        
+//        label.addSubview(labelBg)
 
     }
     
