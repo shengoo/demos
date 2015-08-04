@@ -94,10 +94,10 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         var str = "http://182.92.153.230/file/" + category.image
         var url = NSURL(string: str.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
-        var data = NSData(contentsOfURL: url!)
-        var image = UIImage(data: data!)
-        
-        cell.image.image = image
+//        var data = NSData(contentsOfURL: url!)
+//        var image = UIImage(data: data!)
+        cell.image.sd_setImageWithURL(url)
+//        cell.image.image = image
         cell.label.text = category.name
 
         return cell;

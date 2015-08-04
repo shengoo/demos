@@ -3,3 +3,4 @@
 //
 
 #import "AsyncImageView.h"
+#import "SDWebImage/UIImageView+WebCache.h"

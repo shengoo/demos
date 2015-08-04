@@ -57,7 +57,6 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     
     func loadMovies(movies:NSArray){
         for movie in movies {
-            println(movie["title"])
             var id = movie["id"] as! Int
             var title = movie["title"] as! String
             var description = movie["description"] as! String
