@@ -36,7 +36,7 @@ class MovieService {
         manager.GET(url,
             parameters: nil,
             success: { (oper, data) -> Void in
-                print(data)
+//                print(data)
                 callback(data as! NSArray)
             },
             failure: { (opeation, error) -> Void in

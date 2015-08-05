@@ -20,6 +20,8 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = ""
 
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "navleft"), style: UIBarButtonItemStyle.Plain, target: self, action: "doNothing")
@@ -100,9 +102,32 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println(indexPath)
+        performSegueWithIdentifier(movieSegueIdentifier, sender: tableView)
+    }
+    
+    
+    let movieSegueIdentifier = "ShowMovieSegue"
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        println(segue.identifier)
+        if segue.identifier == movieSegueIdentifier {
+            if let indexPath = self.tableView.indexPathForSelectedRow() {
+                let movie = movies[indexPath.row]
+                navigationItem.title = "返回"
+                (segue.destinationViewController as! MovieViewController).movie = movie
+            }
+//            println(1)
+//            if let destination = segue.destinationViewController as? MovieViewController {
+//                println(2)
+//                if let index = tableView.indexPathForSelectedRow()?.row {
+//                    println(3)
+//                    destination.movie = movies[index]
+//                }
+//            }
+        }
     }
 
+    
 
 }
 
