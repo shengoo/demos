@@ -57,7 +57,7 @@
 		047FF6751B7113A7004E1209 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		047FF6791B711651004E1209 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		047FF67B1B722DD8004E1209 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
-		049C19371B5D39DE0031A77A /* vis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		049C19371B5D39DE0031A77A /* 微爱视.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微爱视.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C193B1B5D39DE0031A77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049C193C1B5D39DE0031A77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049C193E1B5D39DE0031A77A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		049C19381B5D39DE0031A77A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				049C19371B5D39DE0031A77A /* vis.app */,
+				049C19371B5D39DE0031A77A /* 微爱视.app */,
 				049C194E1B5D39DE0031A77A /* visTests.xctest */,
 			);
 			name = Products;
@@ -215,7 +215,7 @@
 			);
 			name = vis;
 			productName = vis;
-			productReference = 049C19371B5D39DE0031A77A /* vis.app */;
+			productReference = 049C19371B5D39DE0031A77A /* 微爱视.app */;
 			productType = "com.apple.product-type.application";
 		};
 		049C194D1B5D39DE0031A77A /* visTests */ = {
@@ -478,7 +478,7 @@
 				INFOPLIST_FILE = vis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = vis;
+				PRODUCT_NAME = "微爱视";
 				SWIFT_OBJC_BRIDGING_HEADER = "vis/vis-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,7 +497,7 @@
 				INFOPLIST_FILE = vis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = vis;
+				PRODUCT_NAME = "微爱视";
 				SWIFT_OBJC_BRIDGING_HEADER = "vis/vis-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
