@@ -30,10 +30,15 @@ class MovieService {
         request(settings.category, callback: callback)
     }
     
+    func getByCategory(category:String,callback:(NSArray)->()){
+        var str = "http://182.92.153.230/api/getmoviebycategory/" + category
+        request(str, callback: callback)
+    }
+
+    
     func request(url:String,callback:(NSArray)->()){
-        var nsurl = NSURL(string: url)
-        
-        manager.GET(url,
+        var nsurl = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        manager.GET(nsurl,
             parameters: nil,
             success: { (oper, data) -> Void in
 //                print(data)

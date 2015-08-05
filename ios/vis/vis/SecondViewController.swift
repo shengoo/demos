@@ -21,6 +21,9 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
         
         
+        navigationItem.title = "返回"
+        navigationItem.titleView = UIView()
+        
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "navleft"), style: UIBarButtonItemStyle.Plain, target: self, action: "doNothing")
         //        leftButton.enabled = false
@@ -98,6 +101,22 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         return cell;
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
+        performSegueWithIdentifier(showListSegueIdentifier, sender: indexPath)
+    }
+    
+    let showListSegueIdentifier = "showList"
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == showListSegueIdentifier {
+            if let indexPath = sender as? NSIndexPath {
+                let category = categories[indexPath.row]
+                (segue.destinationViewController as! CategoryMovieListViewController).category = category
+            }
+        }
+    }
+
     
 
 

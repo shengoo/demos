@@ -1,62 +1,42 @@
 //
-//  FirstViewController.swift
+//  CategoryMovieListViewController.swift
 //  vis
 //
-//  Created by Qing Sheng on 15/7/20.
+//  Created by Qing Sheng on 15/8/5.
 //  Copyright (c) 2015年 Sheng Qing. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
+class CategoryMovieListViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource {
     
+    
+    var category:Category?
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var movies = [Movie]()
     
     var service:MovieService!
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "返回"
-        navigationItem.titleView = UIView()
-
+        self.navigationItem.title = category?.name
         
-        let leftButton = UIBarButtonItem(image: UIImage(named: "navleft"), style: UIBarButtonItemStyle.Plain, target: self, action: "doNothing")
-//        leftButton.enabled = false
-        self.navigationItem.leftBarButtonItem = leftButton
-        
-        
-        let rightButton = UIBarButtonItem(image: UIImage(named: "setting"), style: UIBarButtonItemStyle.Plain, target: self, action: "navRightClicked")
-        self.navigationItem.rightBarButtonItem = rightButton
-        
-        
-
         var nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
         
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
-
-
+        
+        
         
         service = MovieService()
-        service.getAll({
+        service.getByCategory(category!.name, callback: {
             (response) in
             self.loadMovies(response)
         })
-        
     }
-    
-    func doNothing(){
-        println("do nothing")
-    }
-    
-    func navRightClicked(){
-        println("navRightClicked")
-    }
-    
     
     func loadMovies(movies:NSArray){
         for movie in movies {
@@ -77,19 +57,12 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     }
     
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
+        
         
         var cell:MovieTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! MovieTableViewCell
         
@@ -119,7 +92,21 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
         }
     }
 
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
 
-}
+    /*
+    // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

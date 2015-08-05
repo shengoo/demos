@@ -21,6 +21,7 @@
 		047FF6771B7113A7004E1209 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047FF6751B7113A7004E1209 /* CategoryCollectionViewCell.xib */; };
 		047FF67A1B711651004E1209 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF6791B711651004E1209 /* Category.swift */; };
 		047FF67C1B722DD8004E1209 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF67B1B722DD8004E1209 /* MovieViewController.swift */; };
+		047FF67E1B726337004E1209 /* CategoryMovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF67D1B726336004E1209 /* CategoryMovieListViewController.swift */; };
 		049C193D1B5D39DE0031A77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C193C1B5D39DE0031A77A /* AppDelegate.swift */; };
 		049C193F1B5D39DE0031A77A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C193E1B5D39DE0031A77A /* FirstViewController.swift */; };
 		049C19411B5D39DE0031A77A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C19401B5D39DE0031A77A /* SecondViewController.swift */; };
@@ -57,6 +58,7 @@
 		047FF6751B7113A7004E1209 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		047FF6791B711651004E1209 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		047FF67B1B722DD8004E1209 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		047FF67D1B726336004E1209 /* CategoryMovieListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryMovieListViewController.swift; sourceTree = "<group>"; };
 		049C19371B5D39DE0031A77A /* 微爱视.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微爱视.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C193B1B5D39DE0031A77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049C193C1B5D39DE0031A77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				047FF6741B7113A7004E1209 /* CategoryCollectionViewCell.swift */,
 				047FF6751B7113A7004E1209 /* CategoryCollectionViewCell.xib */,
 				047FF67B1B722DD8004E1209 /* MovieViewController.swift */,
+				047FF67D1B726336004E1209 /* CategoryMovieListViewController.swift */,
 			);
 			path = vis;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				049C19411B5D39DE0031A77A /* SecondViewController.swift in Sources */,
 				049C193D1B5D39DE0031A77A /* AppDelegate.swift in Sources */,
 				047FF5F31B6521C0004E1209 /* MovieTableViewCell.swift in Sources */,
+				047FF67E1B726337004E1209 /* CategoryMovieListViewController.swift in Sources */,
 				047FF6761B7113A7004E1209 /* CategoryCollectionViewCell.swift in Sources */,
 				049C193F1B5D39DE0031A77A /* FirstViewController.swift in Sources */,
 				047FF60B1B65DD10004E1209 /* Settings.swift in Sources */,
