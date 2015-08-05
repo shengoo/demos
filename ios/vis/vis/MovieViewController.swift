@@ -10,20 +10,35 @@ import UIKit
 
 class MovieViewController: UIViewController {
     
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var descLbl: UILabel!
     
     var movie:Movie?{
         didSet {
             
-            updateView()
+//            updateView()
         }
     }
 
+    @IBOutlet weak var image: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateView()
         
+        var url = NSURL(string: "http://182.92.153.230/file/" + movie!.image)
+        image.sd_setImageWithURL(url)
+        
+//        let playBtn = UIImageView(image: UIImage(named: "play"))
+//        playBtn.center = image.center
+//        image.addSubview(playBtn)
+        
+        self.titleLbl.text = movie?.title
+        self.descLbl.text = movie?.description
+//        descLbl.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
+//        descLbl.numberOfLines = 0
+//        descLbl.frame = CGRectMake(0, 0, 200, 600)
+//        descLbl.sizeToFit()
     }
     
     func updateView(){

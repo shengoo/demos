@@ -21,7 +21,9 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = ""
+        navigationItem.title = "返回"
+        navigationItem.titleView = UIView()
+        println("viewDidLoad")
 
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "navleft"), style: UIBarButtonItemStyle.Plain, target: self, action: "doNothing")
@@ -113,7 +115,6 @@ class FirstViewController: UIViewController ,UITableViewDelegate, UITableViewDat
         if segue.identifier == movieSegueIdentifier {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let movie = movies[indexPath.row]
-                navigationItem.title = "返回"
                 (segue.destinationViewController as! MovieViewController).movie = movie
             }
 //            println(1)
