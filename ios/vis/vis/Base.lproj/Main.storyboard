@@ -75,6 +75,9 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-wX-WKb">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="244"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="aSf-zz-Ctj">
+                                        <rect key="frame" x="270" y="92" width="60" height="60"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfz-jw-ix7" userLabel="LabelBg">
                                         <rect key="frame" x="0.0" y="244" width="600" height="40"/>
                                         <subviews>
@@ -123,7 +126,9 @@
                                     <constraint firstItem="Jfz-jw-ix7" firstAttribute="leading" secondItem="h8m-KV-sw8" secondAttribute="leading" id="WQ0-Wc-Rib"/>
                                     <constraint firstItem="Jfz-jw-ix7" firstAttribute="trailing" secondItem="h8m-KV-sw8" secondAttribute="trailing" id="acJ-zX-dmH"/>
                                     <constraint firstItem="mPq-wX-WKb" firstAttribute="trailing" secondItem="h8m-KV-sw8" secondAttribute="trailing" id="ceT-lp-XiH"/>
+                                    <constraint firstItem="aSf-zz-Ctj" firstAttribute="centerX" secondItem="mPq-wX-WKb" secondAttribute="centerX" id="eBe-m2-fLi"/>
                                     <constraint firstItem="7Km-Da-LvT" firstAttribute="trailing" secondItem="h8m-KV-sw8" secondAttribute="trailing" constant="-16" id="l3D-cx-MwN"/>
+                                    <constraint firstItem="aSf-zz-Ctj" firstAttribute="centerY" secondItem="mPq-wX-WKb" secondAttribute="centerY" id="m2X-FY-xo0"/>
                                     <constraint firstItem="mPq-wX-WKb" firstAttribute="top" secondItem="h8m-KV-sw8" secondAttribute="top" id="mQc-xz-pje"/>
                                 </constraints>
                             </view>
@@ -266,5 +271,8 @@
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play" width="60" height="60"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

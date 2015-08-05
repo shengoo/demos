@@ -25,6 +25,7 @@ class MovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = movie?.title
         
         var url = NSURL(string: "http://182.92.153.230/file/" + movie!.image)
         image.sd_setImageWithURL(url)
