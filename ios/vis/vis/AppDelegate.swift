@@ -10,6 +10,8 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var umengKey = "55c32328e0f55ae881000579"
 
     var window: UIWindow?
     var splashView: UIImageView?;
@@ -17,6 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        MobClick.startWithAppkey(umengKey)
+        
+        //CFBundleVersion for build version
+        if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String{
+            MobClick.setAppVersion(version)
+        }
         
         window?.makeKeyAndVisible()
         

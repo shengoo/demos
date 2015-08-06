@@ -10,7 +10,7 @@ import UIKit
 import MediaPlayer
 
 
-class MovieViewController: UIViewController,PlayerDelegate {
+class MovieViewController: UIViewController {
     
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descLbl: UILabel!
@@ -32,9 +32,6 @@ class MovieViewController: UIViewController,PlayerDelegate {
         var url = NSURL(string: "http://182.92.153.230/file/" + movie!.image)
         image.sd_setImageWithURL(url)
         
-//        let playBtn = UIImageView(image: UIImage(named: "play"))
-//        playBtn.center = image.center
-//        image.addSubview(playBtn)
         
         self.titleLbl.text = movie?.title
         self.descLbl.text = movie?.description
@@ -56,16 +53,9 @@ class MovieViewController: UIViewController,PlayerDelegate {
 //        var urlStr = "http://www.sheng00.com/jwplayer/video.mp4"
         var url = NSURL(string: urlStr)
         
-//        println("playMovie from " + urlStr)
         
         playerVC = MPMoviePlayerViewController(contentURL: url)
         
-//        var player = MPMoviePlayerController(contentURL: url)
-//        player.controlStyle = MPMovieControlStyle.Fullscreen
-//        player.movieSourceType = MPMovieSourceType.File
-//        player.shouldAutoplay = true
-//        self.view.addSubview(player.view)
-//        player.setFullscreen(true, animated: true)
         
         NSNotificationCenter.defaultCenter().removeObserver(playerVC!, name: MPMoviePlayerPlaybackDidFinishNotification, object: playerVC!.moviePlayer)
         
@@ -82,24 +72,7 @@ class MovieViewController: UIViewController,PlayerDelegate {
         playerVC!.moviePlayer.movieSourceType = MPMovieSourceType.File
         playerVC!.moviePlayer.prepareToPlay()
         playerVC!.moviePlayer.play()
-        
-//        NSNotificationCenter.defaultCenter().addObserver(self,
-//            selector: "doneButtonClick",
-//            name: MPMoviePlayerWillExitFullscreenNotification,
-//            object: nil)
-        
-        
-//        var player = Player()
-//        player.delegate = self
-//        player.view.frame = self.view.bounds
-//        
-//        self.addChildViewController(player)
-//        self.view.addSubview(player.view)
-//        player.didMoveToParentViewController(self)
-//        
-//        player.path = urlStr
-//        player.playbackLoops = true
-//        player.playFromBeginning()
+
         
     }
     
@@ -113,31 +86,25 @@ class MovieViewController: UIViewController,PlayerDelegate {
         println("doneButtonClick")
     }
     
-    func updateView(){
-        self.navigationItem.title = movie?.title
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func playerReady(player: Player){
-        
+    override func viewWillAppear(animated: Bool){
+        super.viewWillAppear(animated)
+        if let movieName = movie?.title{
+            MobClick.beginLogPageView(movieName)
+        }
     }
-    func playerPlaybackStateDidChange(player: Player){
-        
-    }
-    func playerBufferingStateDidChange(player: Player){
-        
+    override func viewWillDisappear(animated: Bool){
+        super.viewWillDisappear(animated)
+        if let movieName = movie?.title{
+            MobClick.endLogPageView(movieName)
+        }
     }
     
-    func playerPlaybackWillStartFromBeginning(player: Player){
-        
-    }
-    func playerPlaybackDidEnd(player: Player){
-        
-    }
 
     
 

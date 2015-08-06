@@ -24,6 +24,8 @@
 		047FF67E1B726337004E1209 /* CategoryMovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF67D1B726336004E1209 /* CategoryMovieListViewController.swift */; };
 		047FF6801B72FF1B004E1209 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047FF67F1B72FF1B004E1209 /* MediaPlayer.framework */; };
 		047FF6821B7302F3004E1209 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF6811B7302F3004E1209 /* Player.swift */; };
+		048DA25B1B73625900F7F4E7 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DA2581B73625900F7F4E7 /* libMobClickLibrary.a */; };
+		048DA25D1B7363EF00F7F4E7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DA25C1B7363EF00F7F4E7 /* libz.dylib */; };
 		049C193D1B5D39DE0031A77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C193C1B5D39DE0031A77A /* AppDelegate.swift */; };
 		049C193F1B5D39DE0031A77A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C193E1B5D39DE0031A77A /* FirstViewController.swift */; };
 		049C19411B5D39DE0031A77A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C19401B5D39DE0031A77A /* SecondViewController.swift */; };
@@ -63,6 +65,10 @@
 		047FF67D1B726336004E1209 /* CategoryMovieListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryMovieListViewController.swift; sourceTree = "<group>"; };
 		047FF67F1B72FF1B004E1209 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		047FF6811B7302F3004E1209 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		048DA2581B73625900F7F4E7 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		048DA2591B73625900F7F4E7 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		048DA25A1B73625900F7F4E7 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		048DA25C1B7363EF00F7F4E7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		049C19371B5D39DE0031A77A /* 微爱视.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微爱视.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C193B1B5D39DE0031A77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049C193C1B5D39DE0031A77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,9 +90,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048DA25D1B7363EF00F7F4E7 /* libz.dylib in Frameworks */,
 				047FF6801B72FF1B004E1209 /* MediaPlayer.framework in Frameworks */,
 				047FF5FF1B65B2D1004E1209 /* SystemConfiguration.framework in Frameworks */,
 				047FF5FD1B65B2CB004E1209 /* Security.framework in Frameworks */,
+				048DA25B1B73625900F7F4E7 /* libMobClickLibrary.a in Frameworks */,
 				047FF5FB1B65B2C6004E1209 /* MobileCoreServices.framework in Frameworks */,
 				047FF5F91B65B2BD004E1209 /* Foundation.framework in Frameworks */,
 				047FF5F71B65B2AE004E1209 /* CoreGraphics.framework in Frameworks */,
@@ -113,6 +121,16 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		048DA2571B73604900F7F4E7 /* umeng analytics */ = {
+			isa = PBXGroup;
+			children = (
+				048DA2581B73625900F7F4E7 /* libMobClickLibrary.a */,
+				048DA2591B73625900F7F4E7 /* MobClick.h */,
+				048DA25A1B73625900F7F4E7 /* MobClickSocialAnalytics.h */,
+			);
+			name = "umeng analytics";
+			sourceTree = "<group>";
+		};
 		049C192E1B5D39DE0031A77A = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +154,7 @@
 		049C19391B5D39DE0031A77A /* vis */ = {
 			isa = PBXGroup;
 			children = (
+				048DA2571B73604900F7F4E7 /* umeng analytics */,
 				047FF6781B711631004E1209 /* Model */,
 				049C193C1B5D39DE0031A77A /* AppDelegate.swift */,
 				049C193E1B5D39DE0031A77A /* FirstViewController.swift */,
@@ -186,6 +205,7 @@
 		9E7D9CCB39BABE712C261F54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				048DA25C1B7363EF00F7F4E7 /* libz.dylib */,
 				047FF67F1B72FF1B004E1209 /* MediaPlayer.framework */,
 				047FF5FE1B65B2D1004E1209 /* SystemConfiguration.framework */,
 				047FF5FC1B65B2CB004E1209 /* Security.framework */,
@@ -490,6 +510,10 @@
 				INFOPLIST_FILE = vis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vis",
+				);
 				PRODUCT_NAME = "微爱视";
 				SWIFT_OBJC_BRIDGING_HEADER = "vis/vis-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -509,6 +533,10 @@
 				INFOPLIST_FILE = vis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vis",
+				);
 				PRODUCT_NAME = "微爱视";
 				SWIFT_OBJC_BRIDGING_HEADER = "vis/vis-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
