@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         MobClick.startWithAppkey(umengKey)
+        UMSocialData.setAppKey(umengKey)
         
         //CFBundleVersion for build version
         if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String{
@@ -105,6 +106,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         return true
+    }
+    
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return UMSocialSnsService.handleOpenURL(url)
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        return UMSocialSnsService.handleOpenURL(url)
     }
     
 

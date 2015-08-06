@@ -77,13 +77,32 @@ class MovieViewController: UIViewController {
     }
     
     func movieFinishedCallback(){
-//        var reason = notification.userInfo[MPMoviePlayerPlaybackDidFinishReasonUserInfoKey]
         NSNotificationCenter.defaultCenter().removeObserver(self, name: MPMoviePlayerPlaybackDidFinishNotification, object: playerVC!.moviePlayer)
         dismissMoviePlayerViewControllerAnimated()
     }
     
     func doneButtonClick(){
         println("doneButtonClick")
+    }
+    
+    func share(){
+        //wechat
+        UMSocialWechatHandler.setWXAppId("wx6edc904b2fb2ca36", appSecret: "3457e00b56a26d4399f7fda669f3a037", url: "http://www.umeng.com/social")
+        
+        //qq
+        UMSocialQQHandler.setQQWithAppId("1104708147", appKey:"BEvrXcIO5hMusbWv" ,url:"http://www.umeng.com/social");
+        
+//        UMSocialConfig.hiddenNotInstallPlatforms([UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, UMShareToSina])
+        
+        var shareTypes:NSArray = [UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, UMShareToSina];
+        
+        UMSocialSnsService.presentSnsIconSheetView(self,
+            appKey:"55c32328e0f55ae881000579",
+            shareText:movie?.title,
+            shareImage:image.image,
+            shareToSnsNames:shareTypes as [AnyObject],
+            delegate:nil);
+
     }
     
 
