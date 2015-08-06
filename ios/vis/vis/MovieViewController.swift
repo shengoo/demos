@@ -49,31 +49,67 @@ class MovieViewController: UIViewController,PlayerDelegate {
         image.addGestureRecognizer(singleTap)
     }
     
+    var playerVC:MPMoviePlayerViewController?
+    
     func playMovie(){
         var urlStr = "http://182.92.153.230/file/" + movie!.video;
-//        var urlStr = "http://10.35.24.186:3000/file/a.mp4"
-        var url = NSURL(string: "http://182.92.153.230/file/" + movie!.video)
+//        var urlStr = "http://www.sheng00.com/jwplayer/video.mp4"
+        var url = NSURL(string: urlStr)
         
-        println("playMovie from " + urlStr)
+//        println("playMovie from " + urlStr)
+        
+        playerVC = MPMoviePlayerViewController(contentURL: url)
         
 //        var player = MPMoviePlayerController(contentURL: url)
 //        player.controlStyle = MPMovieControlStyle.Fullscreen
+//        player.movieSourceType = MPMovieSourceType.File
 //        player.shouldAutoplay = true
 //        self.view.addSubview(player.view)
 //        player.setFullscreen(true, animated: true)
         
-        var player = Player()
-        player.delegate = self
-        player.view.frame = self.view.bounds
+        NSNotificationCenter.defaultCenter().removeObserver(playerVC!, name: MPMoviePlayerPlaybackDidFinishNotification, object: playerVC!.moviePlayer)
         
-        self.addChildViewController(player)
-        self.view.addSubview(player.view)
-        player.didMoveToParentViewController(self)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "movieFinishedCallback", name: MPMoviePlayerPlaybackDidFinishNotification, object: playerVC!.moviePlayer)
         
-        player.path = urlStr
-        player.playbackLoops = true
-        player.playFromBeginning()
+        playerVC!.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
         
+        presentViewController(playerVC!, animated: true, completion: {})
+        
+        
+        var landscapeTransform = CGAffineTransformMakeRotation(CGFloat(M_PI_2));
+        playerVC!.moviePlayer.view.transform = landscapeTransform;
+        
+        playerVC!.moviePlayer.prepareToPlay()
+        playerVC!.moviePlayer.play()
+        
+//        NSNotificationCenter.defaultCenter().addObserver(self,
+//            selector: "doneButtonClick",
+//            name: MPMoviePlayerWillExitFullscreenNotification,
+//            object: nil)
+        
+        
+//        var player = Player()
+//        player.delegate = self
+//        player.view.frame = self.view.bounds
+//        
+//        self.addChildViewController(player)
+//        self.view.addSubview(player.view)
+//        player.didMoveToParentViewController(self)
+//        
+//        player.path = urlStr
+//        player.playbackLoops = true
+//        player.playFromBeginning()
+        
+    }
+    
+    func movieFinishedCallback(){
+//        var reason = notification.userInfo[MPMoviePlayerPlaybackDidFinishReasonUserInfoKey]
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: MPMoviePlayerPlaybackDidFinishNotification, object: playerVC!.moviePlayer)
+        dismissMoviePlayerViewControllerAnimated()
+    }
+    
+    func doneButtonClick(){
+        println("doneButtonClick")
     }
     
     func updateView(){
