@@ -22,6 +22,8 @@
 		047FF67A1B711651004E1209 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF6791B711651004E1209 /* Category.swift */; };
 		047FF67C1B722DD8004E1209 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF67B1B722DD8004E1209 /* MovieViewController.swift */; };
 		047FF67E1B726337004E1209 /* CategoryMovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF67D1B726336004E1209 /* CategoryMovieListViewController.swift */; };
+		047FF6801B72FF1B004E1209 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047FF67F1B72FF1B004E1209 /* MediaPlayer.framework */; };
+		047FF6821B7302F3004E1209 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF6811B7302F3004E1209 /* Player.swift */; };
 		049C193D1B5D39DE0031A77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C193C1B5D39DE0031A77A /* AppDelegate.swift */; };
 		049C193F1B5D39DE0031A77A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C193E1B5D39DE0031A77A /* FirstViewController.swift */; };
 		049C19411B5D39DE0031A77A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C19401B5D39DE0031A77A /* SecondViewController.swift */; };
@@ -59,6 +61,8 @@
 		047FF6791B711651004E1209 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		047FF67B1B722DD8004E1209 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		047FF67D1B726336004E1209 /* CategoryMovieListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryMovieListViewController.swift; sourceTree = "<group>"; };
+		047FF67F1B72FF1B004E1209 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		047FF6811B7302F3004E1209 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		049C19371B5D39DE0031A77A /* 微爱视.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微爱视.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C193B1B5D39DE0031A77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049C193C1B5D39DE0031A77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047FF6801B72FF1B004E1209 /* MediaPlayer.framework in Frameworks */,
 				047FF5FF1B65B2D1004E1209 /* SystemConfiguration.framework in Frameworks */,
 				047FF5FD1B65B2CB004E1209 /* Security.framework in Frameworks */,
 				047FF5FB1B65B2C6004E1209 /* MobileCoreServices.framework in Frameworks */,
@@ -138,6 +143,7 @@
 				049C19421B5D39DE0031A77A /* Main.storyboard */,
 				049C19451B5D39DE0031A77A /* Images.xcassets */,
 				049C19471B5D39DE0031A77A /* LaunchScreen.xib */,
+				047FF6811B7302F3004E1209 /* Player.swift */,
 				049C193A1B5D39DE0031A77A /* Supporting Files */,
 				047FF5F21B6521C0004E1209 /* MovieTableViewCell.swift */,
 				047FF5F41B65237F004E1209 /* MovieTableViewCell.xib */,
@@ -180,6 +186,7 @@
 		9E7D9CCB39BABE712C261F54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				047FF67F1B72FF1B004E1209 /* MediaPlayer.framework */,
 				047FF5FE1B65B2D1004E1209 /* SystemConfiguration.framework */,
 				047FF5FC1B65B2CB004E1209 /* Security.framework */,
 				047FF5FA1B65B2C6004E1209 /* MobileCoreServices.framework */,
@@ -341,6 +348,7 @@
 				047FF67C1B722DD8004E1209 /* MovieViewController.swift in Sources */,
 				047FF67A1B711651004E1209 /* Category.swift in Sources */,
 				047FF60D1B65DDA1004E1209 /* MovieService.swift in Sources */,
+				047FF6821B7302F3004E1209 /* Player.swift in Sources */,
 				049C19411B5D39DE0031A77A /* SecondViewController.swift in Sources */,
 				049C193D1B5D39DE0031A77A /* AppDelegate.swift in Sources */,
 				047FF5F31B6521C0004E1209 /* MovieTableViewCell.swift in Sources */,
