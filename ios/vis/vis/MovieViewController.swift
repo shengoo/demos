@@ -79,6 +79,7 @@ class MovieViewController: UIViewController,PlayerDelegate {
         var landscapeTransform = CGAffineTransformMakeRotation(CGFloat(M_PI_2));
         playerVC!.moviePlayer.view.transform = landscapeTransform;
         
+        playerVC!.moviePlayer.movieSourceType = MPMovieSourceType.File
         playerVC!.moviePlayer.prepareToPlay()
         playerVC!.moviePlayer.play()
         
