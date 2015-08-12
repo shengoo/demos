@@ -108,28 +108,47 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="600" translatesAutoresizingMaskIntoConstraints="NO" id="7Km-Da-LvT" userLabel="desc">
-                                        <rect key="frame" x="16" y="302" width="568" height="190"/>
+                                        <rect key="frame" x="16" y="302" width="568" height="110"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrW-Ny-kM9">
+                                        <rect key="frame" x="548" y="454" width="36" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="0Vo-Cx-OcL"/>
+                                            <constraint firstAttribute="width" constant="36" id="7XX-fE-GvD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="分享" image="分享">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareBtnPressed:" destination="4PY-z1-5Uu" eventType="touchUpInside" id="U2S-cx-Q8d"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="7Km-Da-LvT" firstAttribute="top" secondItem="Jfz-jw-ix7" secondAttribute="bottom" constant="16" id="0lY-K5-KFD"/>
-                                    <constraint firstItem="7Km-Da-LvT" firstAttribute="bottom" secondItem="h8m-KV-sw8" secondAttribute="bottom" id="5ex-0d-yy6"/>
                                     <constraint firstItem="mPq-wX-WKb" firstAttribute="leading" secondItem="h8m-KV-sw8" secondAttribute="leading" id="5nc-3e-OEj"/>
                                     <constraint firstItem="mPq-wX-WKb" firstAttribute="height" secondItem="h8m-KV-sw8" secondAttribute="height" multiplier="0.5" id="5qa-2Q-fBd"/>
-                                    <constraint firstItem="7Km-Da-LvT" firstAttribute="leading" secondItem="h8m-KV-sw8" secondAttribute="leading" constant="16" id="Mv8-pM-rUZ"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UrW-Ny-kM9" secondAttribute="bottom" constant="16" id="97x-bl-bFq"/>
+                                    <constraint firstItem="UrW-Ny-kM9" firstAttribute="bottom" secondItem="h8m-KV-sw8" secondAttribute="bottom" constant="-16" id="Jhw-wa-gUf"/>
+                                    <constraint firstItem="UrW-Ny-kM9" firstAttribute="top" secondItem="7Km-Da-LvT" secondAttribute="bottom" constant="42" id="Jil-jH-tvN"/>
                                     <constraint firstItem="Jfz-jw-ix7" firstAttribute="top" secondItem="mPq-wX-WKb" secondAttribute="bottom" id="PsI-bm-pyd"/>
                                     <constraint firstItem="Jfz-jw-ix7" firstAttribute="leading" secondItem="h8m-KV-sw8" secondAttribute="leading" id="WQ0-Wc-Rib"/>
+                                    <constraint firstItem="UrW-Ny-kM9" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="h8m-KV-sw8" secondAttribute="trailing" constant="-16" id="aAF-0b-XvL"/>
                                     <constraint firstItem="Jfz-jw-ix7" firstAttribute="trailing" secondItem="h8m-KV-sw8" secondAttribute="trailing" id="acJ-zX-dmH"/>
                                     <constraint firstItem="mPq-wX-WKb" firstAttribute="trailing" secondItem="h8m-KV-sw8" secondAttribute="trailing" id="ceT-lp-XiH"/>
                                     <constraint firstItem="aSf-zz-Ctj" firstAttribute="centerX" secondItem="mPq-wX-WKb" secondAttribute="centerX" id="eBe-m2-fLi"/>
-                                    <constraint firstItem="7Km-Da-LvT" firstAttribute="trailing" secondItem="h8m-KV-sw8" secondAttribute="trailing" constant="-16" id="l3D-cx-MwN"/>
+                                    <constraint firstItem="7Km-Da-LvT" firstAttribute="top" secondItem="Jfz-jw-ix7" secondAttribute="bottom" constant="16" id="gYR-n7-FYe"/>
+                                    <constraint firstItem="7Km-Da-LvT" firstAttribute="trailing" secondItem="UrW-Ny-kM9" secondAttribute="trailing" id="iG0-kl-0wf"/>
                                     <constraint firstItem="aSf-zz-Ctj" firstAttribute="centerY" secondItem="mPq-wX-WKb" secondAttribute="centerY" id="m2X-FY-xo0"/>
                                     <constraint firstItem="mPq-wX-WKb" firstAttribute="top" secondItem="h8m-KV-sw8" secondAttribute="top" id="mQc-xz-pje"/>
+                                    <constraint firstItem="UrW-Ny-kM9" firstAttribute="trailing" secondItem="h8m-KV-sw8" secondAttribute="trailing" constant="-16" id="trp-SC-Tcn"/>
+                                    <constraint firstItem="7Km-Da-LvT" firstAttribute="centerX" secondItem="Jfz-jw-ix7" secondAttribute="centerX" id="zSs-sr-sRI"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -326,6 +345,7 @@
     </scenes>
     <resources>
         <image name="play" width="60" height="60"/>
+        <image name="分享" width="10" height="9"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZP9-7p-Po8"/>

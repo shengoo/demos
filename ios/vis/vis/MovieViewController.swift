@@ -86,16 +86,17 @@ class MovieViewController: UIViewController {
     }
     
     func share(){
+        var url = "http://182.92.153.230/\(movie!.id)"
         //wechat
-        UMSocialWechatHandler.setWXAppId("wx6edc904b2fb2ca36", appSecret: "3457e00b56a26d4399f7fda669f3a037", url: "http://www.umeng.com/social")
+        UMSocialWechatHandler.setWXAppId("wx6edc904b2fb2ca36", appSecret: "3457e00b56a26d4399f7fda669f3a037", url: url)
         
         //qq
-        UMSocialQQHandler.setQQWithAppId("1104708147", appKey:"BEvrXcIO5hMusbWv" ,url:"http://www.umeng.com/social");
+        UMSocialQQHandler.setQQWithAppId("1104708147", appKey:"BEvrXcIO5hMusbWv" ,url:url);
         
 //        UMSocialConfig.hiddenNotInstallPlatforms([UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, UMShareToSina])
         
         var shareTypes:NSArray = [UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, UMShareToSina];
-        
+
         UMSocialSnsService.presentSnsIconSheetView(self,
             appKey:"55c32328e0f55ae881000579",
             shareText:movie?.title,
@@ -126,6 +127,9 @@ class MovieViewController: UIViewController {
     
 
     
+    @IBAction func shareBtnPressed(sender: UIButton) {
+        share()
+    }
 
     /*
     // MARK: - Navigation
