@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var umengKey = "55c32328e0f55ae881000579"
 
     var window: UIWindow?
-    var splashView: UIImageView?;
+//    var splashView: UIImageView?;
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -30,14 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
-        splashView = UIImageView(frame: UIScreen.mainScreen().bounds)
+        var splashView = UIImageView(frame: UIScreen.mainScreen().bounds)
         
         var background = UIImageView(frame: UIScreen.mainScreen().bounds)
         background.image = UIImage(named: "载入动画-图片")
-        splashView?.addSubview(background)
+        splashView.addSubview(background)
         
-        window?.addSubview(splashView!)
-        window?.bringSubviewToFront(splashView!)
+        window?.addSubview(splashView)
+        window?.bringSubviewToFront(splashView)
         
         
         var wordx = UIScreen.mainScreen().bounds.width / 4;
@@ -46,28 +46,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var wordh = UIScreen.mainScreen().bounds.height / 2;
         
         var word = UIImageView(image: UIImage(named: "logo"))
-        word.center = splashView!.center
+        word.center = splashView.center
         word.alpha = 0
-        splashView?.addSubview(word)
+        splashView.addSubview(word)
         
         
         
-        UIView.animateWithDuration(2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn,
+        var copyright = UIImageView(image: UIImage(named: "copyright"))
+        var x:CGFloat, y:CGFloat;
+        x = ( splashView.frame.size.width - copyright.frame.size.width) / 2;
+        y = ( splashView.frame.size.height - copyright.frame.size.height - 32 );
+        copyright.frame = CGRectMake(x, y, copyright.frame.size.width, copyright.frame.size.height);
+        splashView.addSubview(copyright)
+        
+        
+        
+        UIView.animateWithDuration(4,
+            delay: 0,
+            options: UIViewAnimationOptions.CurveEaseOut,
             animations: {
-                background.transform = CGAffineTransformMakeScale(1.1, 1.1)
+                background.transform = CGAffineTransformMakeScale(1.2, 1.2)
             },
             completion: { _ in
                 
             }
         )
-        UIView.animateWithDuration(2, delay: 2, options: .CurveLinear,
-            animations: {
-                background.transform = CGAffineTransformMakeScale(1, 1)
-            },
-            completion: { _ in
-                
-            }
-        )
+//        UIView.animateWithDuration(2, delay: 2, options: .CurveLinear,
+//            animations: {
+//                background.transform = CGAffineTransformMakeScale(1, 1)
+//            },
+//            completion: { _ in
+//                
+//            }
+//        )
         
         UIView.animateWithDuration(2, delay: 1, options: UIViewAnimationOptions.CurveLinear,
             animations: {
@@ -80,10 +91,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIView.animateWithDuration(1.2, delay: 4, options: UIViewAnimationOptions.CurveLinear,
             animations: {
-                splashView?.transform = CGAffineTransformMakeTranslation(-UIScreen.mainScreen().bounds.width, 0)
+                splashView.transform = CGAffineTransformMakeTranslation(-UIScreen.mainScreen().bounds.width, 0)
             },
             completion: { _ in
-                splashView?.removeFromSuperview()
+                splashView.removeFromSuperview()
             }
         );
         
