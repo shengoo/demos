@@ -153,7 +153,7 @@
                             <constraint firstItem="h8m-KV-sw8" firstAttribute="leading" secondItem="guQ-A7-egD" secondAttribute="leading" id="u5l-WR-EQN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="wye-AE-QKZ"/>
+                    <navigationItem key="navigationItem" id="wye-AE-QKZ"/>
                     <connections>
                         <outlet property="descLbl" destination="7Km-Da-LvT" id="tbK-DE-daB"/>
                         <outlet property="image" destination="mPq-wX-WKb" id="k20-8C-ocA"/>
