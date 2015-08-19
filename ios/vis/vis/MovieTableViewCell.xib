@@ -5,8 +5,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="SourceHanSansCN-Regular.otf">
-            <string>SourceHanSansCN-Regular</string>
+        <mutableArray key="SourceHanSansCN-Light.otf">
+            <string>SourceHanSansCN-Light</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -32,7 +32,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="LEd-on-Xcb"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="SourceHanSansCN-Light" family="Source Han Sans CN" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>

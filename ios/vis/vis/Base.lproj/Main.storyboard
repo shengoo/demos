@@ -10,9 +10,9 @@
         <mutableArray key="SourceHanSansCN-Bold.otf">
             <string>SourceHanSansCN-Bold</string>
         </mutableArray>
-        <mutableArray key="SourceHanSansCN-Regular.otf">
-            <string>SourceHanSansCN-Regular</string>
-            <string>SourceHanSansCN-Regular</string>
+        <mutableArray key="SourceHanSansCN-Light.otf">
+            <string>SourceHanSansCN-Light</string>
+            <string>SourceHanSansCN-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -112,7 +112,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="600" translatesAutoresizingMaskIntoConstraints="NO" id="7Km-Da-LvT" userLabel="desc">
                                         <rect key="frame" x="16" y="302" width="568" height="110"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
-                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Light" family="Source Han Sans CN" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -122,7 +122,7 @@
                                             <constraint firstAttribute="height" constant="22" id="0Vo-Cx-OcL"/>
                                             <constraint firstAttribute="width" constant="36" id="7XX-fE-GvD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Light" family="Source Han Sans CN" pointSize="13"/>
                                         <state key="normal" title="分享" image="分享">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
