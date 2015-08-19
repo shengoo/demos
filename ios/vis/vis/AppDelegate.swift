@@ -102,6 +102,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var tabBarController = self.window?.rootViewController as! UITabBarController
         
         var tabBar = tabBarController.tabBar
+//        tabBar.backgroundImage = UIImage(named: "tabbg")
+        
         
 
         
