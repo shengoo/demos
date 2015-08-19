@@ -117,6 +117,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         tabItems[1].selectedImage = UIImage(named: "righta")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
 
+
         
         return true
     }

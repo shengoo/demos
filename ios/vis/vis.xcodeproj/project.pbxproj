@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0421CDDA1B84BCC800125090 /* SourceHanSansCN-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0421CDD31B84BCC800125090 /* SourceHanSansCN-Bold.otf */; };
+		0421CDDB1B84BCC800125090 /* SourceHanSansCN-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0421CDD41B84BCC800125090 /* SourceHanSansCN-ExtraLight.otf */; };
+		0421CDDC1B84BCC800125090 /* SourceHanSansCN-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0421CDD51B84BCC800125090 /* SourceHanSansCN-Heavy.otf */; };
+		0421CDDD1B84BCC800125090 /* SourceHanSansCN-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0421CDD61B84BCC800125090 /* SourceHanSansCN-Light.otf */; };
+		0421CDDE1B84BCC800125090 /* SourceHanSansCN-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0421CDD71B84BCC800125090 /* SourceHanSansCN-Medium.otf */; };
+		0421CDDF1B84BCC800125090 /* SourceHanSansCN-Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0421CDD81B84BCC800125090 /* SourceHanSansCN-Normal.otf */; };
+		0421CDE01B84BCC800125090 /* SourceHanSansCN-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0421CDD91B84BCC800125090 /* SourceHanSansCN-Regular.otf */; };
 		047FF5F31B6521C0004E1209 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FF5F21B6521C0004E1209 /* MovieTableViewCell.swift */; };
 		047FF5F51B65237F004E1209 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047FF5F41B65237F004E1209 /* MovieTableViewCell.xib */; };
 		047FF5F71B65B2AE004E1209 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047FF5F61B65B2AE004E1209 /* CoreGraphics.framework */; };
@@ -77,6 +84,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0421CDD31B84BCC800125090 /* SourceHanSansCN-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansCN-Bold.otf"; sourceTree = "<group>"; };
+		0421CDD41B84BCC800125090 /* SourceHanSansCN-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansCN-ExtraLight.otf"; sourceTree = "<group>"; };
+		0421CDD51B84BCC800125090 /* SourceHanSansCN-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansCN-Heavy.otf"; sourceTree = "<group>"; };
+		0421CDD61B84BCC800125090 /* SourceHanSansCN-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansCN-Light.otf"; sourceTree = "<group>"; };
+		0421CDD71B84BCC800125090 /* SourceHanSansCN-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansCN-Medium.otf"; sourceTree = "<group>"; };
+		0421CDD81B84BCC800125090 /* SourceHanSansCN-Normal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansCN-Normal.otf"; sourceTree = "<group>"; };
+		0421CDD91B84BCC800125090 /* SourceHanSansCN-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansCN-Regular.otf"; sourceTree = "<group>"; };
 		047FF5F21B6521C0004E1209 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		047FF5F41B65237F004E1209 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		047FF5F61B65B2AE004E1209 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -217,6 +231,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0421CDE11B84BCCC00125090 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0421CDD31B84BCC800125090 /* SourceHanSansCN-Bold.otf */,
+				0421CDD41B84BCC800125090 /* SourceHanSansCN-ExtraLight.otf */,
+				0421CDD51B84BCC800125090 /* SourceHanSansCN-Heavy.otf */,
+				0421CDD61B84BCC800125090 /* SourceHanSansCN-Light.otf */,
+				0421CDD71B84BCC800125090 /* SourceHanSansCN-Medium.otf */,
+				0421CDD81B84BCC800125090 /* SourceHanSansCN-Normal.otf */,
+				0421CDD91B84BCC800125090 /* SourceHanSansCN-Regular.otf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		047FF6781B711631004E1209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +404,7 @@
 		049C19391B5D39DE0031A77A /* vis */ = {
 			isa = PBXGroup;
 			children = (
+				0421CDE11B84BCCC00125090 /* fonts */,
 				047FF6831B73925C004E1209 /* umeng share */,
 				048DA2571B73604900F7F4E7 /* umeng analytics */,
 				047FF6781B711631004E1209 /* Model */,
@@ -543,21 +572,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0421CDDC1B84BCC800125090 /* SourceHanSansCN-Heavy.otf in Resources */,
 				047FF6CD1B739273004E1209 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				049C19441B5D39DE0031A77A /* Main.storyboard in Resources */,
 				047FF6771B7113A7004E1209 /* CategoryCollectionViewCell.xib in Resources */,
 				047FF6BF1B739273004E1209 /* UMSCommentInputController.xib in Resources */,
 				047FF6C51B739273004E1209 /* UMSShareListController.xib in Resources */,
+				0421CDDB1B84BCC800125090 /* SourceHanSansCN-ExtraLight.otf in Resources */,
 				047FF6C21B739273004E1209 /* UMShareEditViewControlleriPad.xib in Resources */,
 				047FF6BE1B739273004E1209 /* UMSCommentDetailController.xib in Resources */,
+				0421CDDA1B84BCC800125090 /* SourceHanSansCN-Bold.otf in Resources */,
 				047FF6C11B739273004E1209 /* UMShareEditViewController.xib in Resources */,
 				047FF6BC1B739273004E1209 /* UMSocialLocalizable.strings in Resources */,
 				047FF6C41B739273004E1209 /* UMSnsAccountViewController.xib in Resources */,
 				047FF6C61B739273004E1209 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				049C19491B5D39DE0031A77A /* LaunchScreen.xib in Resources */,
+				0421CDE01B84BCC800125090 /* SourceHanSansCN-Regular.otf in Resources */,
+				0421CDDE1B84BCC800125090 /* SourceHanSansCN-Medium.otf in Resources */,
 				047FF6C31B739273004E1209 /* UMSLoginViewController.xib in Resources */,
 				047FF6C01B739273004E1209 /* UMSCommentInputControlleriPad.xib in Resources */,
+				0421CDDF1B84BCC800125090 /* SourceHanSansCN-Normal.otf in Resources */,
 				047FF5F51B65237F004E1209 /* MovieTableViewCell.xib in Resources */,
+				0421CDDD1B84BCC800125090 /* SourceHanSansCN-Light.otf in Resources */,
 				049C19461B5D39DE0031A77A /* Images.xcassets in Resources */,
 				047FF6CA1B739273004E1209 /* WeiboSDK.bundle in Resources */,
 			);
