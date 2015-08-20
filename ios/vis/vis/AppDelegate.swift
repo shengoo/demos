@@ -52,13 +52,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        var copyright = UIImageView(image: UIImage(named: "copyright"))
+//        var copyright = UIImageView(image: UIImage(named: "copyright"))
+//        var x:CGFloat, y:CGFloat;
+//        x = ( splashView.frame.size.width - copyright.frame.size.width) / 2;
+//        y = ( splashView.frame.size.height - copyright.frame.size.height - 32 );
+//        copyright.frame = CGRectMake(x, y, copyright.frame.size.width, copyright.frame.size.height)
+//        splashView.addSubview(copyright)
+        
+        var font = UIFont(name: "SourceHanSansCN-Light", size: 17.0)
+//        var text:NSString = "北京玖嘉国际传媒有限公司"
+//        var labelSize = text.
+
+        var copyright = UILabel()
+        copyright.text = "- 北京玖嘉国际传媒有限公司 -"
+        copyright.font = font
+        copyright.textColor = UIColor.whiteColor()
+        copyright.sizeToFit()
         var x:CGFloat, y:CGFloat;
         x = ( splashView.frame.size.width - copyright.frame.size.width) / 2;
         y = ( splashView.frame.size.height - copyright.frame.size.height - 32 );
-        copyright.frame = CGRectMake(x, y, copyright.frame.size.width, copyright.frame.size.height);
+        copyright.frame = CGRectMake(x, y, copyright.frame.size.width, copyright.frame.size.height)
         splashView.addSubview(copyright)
-        
         
         
         UIView.animateWithDuration(4,
