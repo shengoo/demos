@@ -54,11 +54,16 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         
     }
     
+    override func viewWillAppear(animated: Bool){
+        self.tabBarController?.tabBar.hidden = false
+    }
+    
     func doNothing(){
         println("do nothing")
     }
     
     func navRightClicked(){
+        performSegueWithIdentifier("showSetting", sender: nil)
         println("navRightClicked")
     }
     

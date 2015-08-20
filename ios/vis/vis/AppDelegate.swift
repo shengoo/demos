@@ -11,6 +11,14 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    func hidetab(){
+        (self.window?.rootViewController as! UITabBarController).tabBar.hidden = true
+    }
+    
+    func showtab(){
+        (self.window?.rootViewController as! UITabBarController).tabBar.hidden = false
+    }
+    
     var umengKey = "55c32328e0f55ae881000579"
 
     var window: UIWindow?
@@ -114,7 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         var tabBarController = self.window?.rootViewController as! UITabBarController
-        
+        tabBarController.hidesBottomBarWhenPushed = true
         var tabBar = tabBarController.tabBar
 //        tabBar.backgroundImage = UIImage(named: "tabbg")
         

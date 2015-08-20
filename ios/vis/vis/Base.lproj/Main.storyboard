@@ -9,8 +9,13 @@
     <customFonts key="customFonts">
         <mutableArray key="SourceHanSansCN-Bold.otf">
             <string>SourceHanSansCN-Bold</string>
+            <string>SourceHanSansCN-Bold</string>
+            <string>SourceHanSansCN-Bold</string>
+            <string>SourceHanSansCN-Bold</string>
         </mutableArray>
         <mutableArray key="SourceHanSansCN-Light.otf">
+            <string>SourceHanSansCN-Light</string>
+            <string>SourceHanSansCN-Light</string>
             <string>SourceHanSansCN-Light</string>
             <string>SourceHanSansCN-Light</string>
         </mutableArray>
@@ -60,6 +65,7 @@
                     <navigationItem key="navigationItem" id="dGO-IA-jB0"/>
                     <connections>
                         <outlet property="tableView" destination="Eb4-Od-IFm" id="2Gq-mc-R2O"/>
+                        <segue destination="LEp-vu-E28" kind="show" identifier="showSetting" id="DmO-Iy-bq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -232,6 +238,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="nJr-ey-XtA" id="uo5-EN-cL2"/>
+                        <segue destination="LEp-vu-E28" kind="show" identifier="showSetting" id="zVh-ms-iUS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -325,6 +332,84 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--设置-->
+        <scene sceneID="KG9-b9-Qj6">
+            <objects>
+                <viewController id="LEp-vu-E28" customClass="SettingViewController" customModule="微爱视" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fZD-ru-COg"/>
+                        <viewControllerLayoutGuide type="bottom" id="a2n-1f-a6n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U9Z-0m-pvP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 北京玖嘉国际传媒有限公司 -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrE-c9-Tr9">
+                                <rect key="frame" x="16" y="514" width="568" height="17"/>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Light" family="Source Han Sans CN" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4Q-lH-7lm">
+                                <rect key="frame" x="16" y="485" width="568" height="17"/>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Light" family="Source Han Sans CN" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhg-h5-rZy">
+                                <rect key="frame" x="16" y="325" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FsW-Px-vFy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Bold" family="Source Han Sans CN" pointSize="20"/>
+                                <state key="normal" title="功能开关">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKb-kV-keN">
+                                <rect key="frame" x="16" y="98" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5UJ-Ko-ele"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Bold" family="Source Han Sans CN" pointSize="20"/>
+                                <state key="normal" title="我的收藏">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBn-UJ-s9i">
+                                <rect key="frame" x="16" y="208" width="568" height="37"/>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Bold" family="Source Han Sans CN" pointSize="20"/>
+                                <state key="normal" title="我的缓存">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xKb-kV-keN" firstAttribute="leading" secondItem="Qhg-h5-rZy" secondAttribute="leading" id="1L9-1J-JUg"/>
+                            <constraint firstItem="xKb-kV-keN" firstAttribute="trailing" secondItem="iBn-UJ-s9i" secondAttribute="trailing" id="2Fa-iO-oJF"/>
+                            <constraint firstItem="Qhg-h5-rZy" firstAttribute="top" secondItem="iBn-UJ-s9i" secondAttribute="bottom" constant="80" id="7Xj-k6-tID"/>
+                            <constraint firstItem="n4Q-lH-7lm" firstAttribute="bottom" secondItem="IrE-c9-Tr9" secondAttribute="bottom" constant="-29" id="7xF-Dy-qad"/>
+                            <constraint firstItem="IrE-c9-Tr9" firstAttribute="trailing" secondItem="U9Z-0m-pvP" secondAttribute="trailingMargin" id="BLO-JF-4Qs"/>
+                            <constraint firstItem="xKb-kV-keN" firstAttribute="trailing" secondItem="Qhg-h5-rZy" secondAttribute="trailing" id="EnA-sE-Gw8"/>
+                            <constraint firstAttribute="bottom" secondItem="Qhg-h5-rZy" secondAttribute="bottom" constant="245" id="Eqd-pQ-wxL"/>
+                            <constraint firstItem="a2n-1f-a6n" firstAttribute="top" secondItem="IrE-c9-Tr9" secondAttribute="bottom" constant="25" id="HYO-Kb-jhT"/>
+                            <constraint firstItem="xKb-kV-keN" firstAttribute="leading" secondItem="U9Z-0m-pvP" secondAttribute="leadingMargin" id="IZV-Kn-mUW"/>
+                            <constraint firstItem="xKb-kV-keN" firstAttribute="top" secondItem="fZD-ru-COg" secondAttribute="bottom" constant="34" id="OU1-7P-pXi"/>
+                            <constraint firstItem="xKb-kV-keN" firstAttribute="leading" secondItem="iBn-UJ-s9i" secondAttribute="leading" id="P1I-WQ-Aww"/>
+                            <constraint firstItem="n4Q-lH-7lm" firstAttribute="leading" secondItem="U9Z-0m-pvP" secondAttribute="leadingMargin" id="ajP-Sv-7jf"/>
+                            <constraint firstItem="IrE-c9-Tr9" firstAttribute="leading" secondItem="U9Z-0m-pvP" secondAttribute="leadingMargin" id="fyQ-et-F7w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n4Q-lH-7lm" secondAttribute="trailing" id="gdC-3C-u49"/>
+                            <constraint firstItem="iBn-UJ-s9i" firstAttribute="top" secondItem="xKb-kV-keN" secondAttribute="bottom" constant="80" id="jza-9Y-ppJ"/>
+                            <constraint firstItem="xKb-kV-keN" firstAttribute="trailing" secondItem="U9Z-0m-pvP" secondAttribute="trailingMargin" id="u64-SW-9ee"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="设置" id="d7H-5j-Xiv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lpj-fR-XSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="779"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="VlX-gh-fpk">
             <objects>
@@ -351,6 +436,7 @@
         <image name="分享" width="10" height="9"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="zVh-ms-iUS"/>
         <segue reference="ZP9-7p-Po8"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
