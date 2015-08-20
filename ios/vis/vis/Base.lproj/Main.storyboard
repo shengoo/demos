@@ -273,7 +273,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="odn-aJ-cIf" firstAttribute="bottom" secondItem="jnd-m3-WlQ" secondAttribute="top" id="6oU-Dv-Kga"/>
+                            <constraint firstItem="odn-aJ-cIf" firstAttribute="bottom" secondItem="jnd-m3-WlQ" secondAttribute="bottom" id="6oU-Dv-Kga"/>
                             <constraint firstItem="odn-aJ-cIf" firstAttribute="leading" secondItem="qKk-FI-pIY" secondAttribute="leading" id="BB6-Xm-PO4"/>
                             <constraint firstItem="odn-aJ-cIf" firstAttribute="trailing" secondItem="qKk-FI-pIY" secondAttribute="trailing" id="kdw-mY-erK"/>
                             <constraint firstItem="odn-aJ-cIf" firstAttribute="top" secondItem="p3W-yl-LxY" secondAttribute="top" id="kv6-Td-9xq"/>
