@@ -34,7 +34,14 @@ class MovieViewController: UIViewController {
         
         
         self.titleLbl.text = movie?.title
-        self.descLbl.text = movie?.description
+//        self.descLbl.text = movie?.description
+        var txt = NSMutableAttributedString(string: movie!.description)
+        var style = NSMutableParagraphStyle()
+        style.lineSpacing = 10
+        txt.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSMakeRange(0, count(movie!.description)))
+//        txt.addAttributes(style, range: NSMakeRange(0, count(movie!.description)))
+        descLbl.attributedText = txt
+        
 //        descLbl.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
 //        descLbl.numberOfLines = 0
 //        descLbl.frame = CGRectMake(0, 0, 200, 600)
