@@ -96,8 +96,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfz-jw-ix7" userLabel="LabelBg">
                                         <rect key="frame" x="0.0" y="295" width="600" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHx-BJ-YCt">
-                                                <rect key="frame" x="10" y="0.0" width="590" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHx-BJ-YCt">
+                                                <rect key="frame" x="16" y="0.0" width="584" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wea-iO-ULN"/>
                                                 </constraints>
@@ -109,10 +109,10 @@
                                         <color key="backgroundColor" red="0.11764705882352941" green="0.098039215686274508" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="FHx-BJ-YCt" secondAttribute="trailing" id="Er9-1H-L9b"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="UZI-QN-qJy"/>
+                                            <constraint firstAttribute="height" constant="40" id="UZI-QN-qJy"/>
                                             <constraint firstItem="FHx-BJ-YCt" firstAttribute="top" secondItem="Jfz-jw-ix7" secondAttribute="top" id="cqf-pr-fTl"/>
                                             <constraint firstAttribute="bottom" secondItem="FHx-BJ-YCt" secondAttribute="bottom" id="fww-Af-pvv"/>
-                                            <constraint firstItem="FHx-BJ-YCt" firstAttribute="leading" secondItem="Jfz-jw-ix7" secondAttribute="leading" constant="10" id="xIU-W4-8Th"/>
+                                            <constraint firstItem="FHx-BJ-YCt" firstAttribute="leading" secondItem="Jfz-jw-ix7" secondAttribute="leading" constant="16" id="xIU-W4-8Th"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="600" translatesAutoresizingMaskIntoConstraints="NO" id="7Km-Da-LvT" userLabel="desc">
