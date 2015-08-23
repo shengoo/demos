@@ -14,6 +14,7 @@ class MovieViewController: UIViewController {
     
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descLbl: UILabel!
+    @IBOutlet weak var cateLbl: UILabel!
     
     var movie:Movie?{
         didSet {
@@ -34,6 +35,8 @@ class MovieViewController: UIViewController {
         
         
         self.titleLbl.text = movie?.title
+//        cateLbl.text = movie!.category + " / " + (movie!.length / 60) + "'" + (movie!.length / 60) + "\""
+        cateLbl.text = "\(movie!.category)  /  \(movie!.length / 60)' \(movie!.length % 60)\""
 //        self.descLbl.text = movie?.description
         var txt = NSMutableAttributedString(string: movie!.description)
         var style = NSMutableParagraphStyle()
