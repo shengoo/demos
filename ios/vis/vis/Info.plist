@@ -2,18 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>SourceHanSansCN-Bold.otf</string>
-		<string>SourceHanSansCN-ExtraLight.otf</string>
-		<string>SourceHanSansCN-Heavy.otf</string>
-		<string>SourceHanSansCN-Light.otf</string>
-		<string>SourceHanSansCN-Medium.otf</string>
-		<string>SourceHanSansCN-Normal.otf</string>
-		<string>SourceHanSansCN-Regular.otf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -72,11 +60,29 @@
 				<string>sina.55c32328e0f55ae881000579</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>QQ41D88233</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SourceHanSansCN-Bold.otf</string>
+		<string>SourceHanSansCN-ExtraLight.otf</string>
+		<string>SourceHanSansCN-Heavy.otf</string>
+		<string>SourceHanSansCN-Light.otf</string>
+		<string>SourceHanSansCN-Medium.otf</string>
+		<string>SourceHanSansCN-Normal.otf</string>
+		<string>SourceHanSansCN-Regular.otf</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -97,5 +103,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

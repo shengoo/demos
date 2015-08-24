@@ -99,22 +99,77 @@ class MovieViewController: UIViewController {
         var url = "http://182.92.153.230/\(movie!.id)"
         //wechat
         UMSocialWechatHandler.setWXAppId("wx6edc904b2fb2ca36", appSecret: "3457e00b56a26d4399f7fda669f3a037", url: url)
+//        UMSocialData.defaultData().extConfig.wechatTimelineData.title = movie!.title
         
         //qq
         UMSocialQQHandler.setQQWithAppId("1104708147", appKey:"BEvrXcIO5hMusbWv" ,url:url);
         
+        
 //        UMSocialConfig.hiddenNotInstallPlatforms([UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, UMShareToSina])
         
         var shareTypes:NSArray = [UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, UMShareToSina];
-
+        
+        UMSocialData.defaultData().title = movie!.title
+        UMSocialData.defaultData().extConfig.qqData.title = movie!.title
+        UMSocialData.defaultData().extConfig.wechatSessionData.title = movie!.title
+        UMSocialData.defaultData().extConfig.sinaData.shareText = movie!.description + " " + url
+        
         UMSocialSnsService.presentSnsIconSheetView(self,
             appKey:"55c32328e0f55ae881000579",
-            shareText:movie?.title,
+            shareText:movie?.description,
             shareImage:image.image,
             shareToSnsNames:shareTypes as [AnyObject],
             delegate:nil);
 
     }
+    
+//    func share2(){
+//        var url = "http://182.92.153.230/\(movie!.id)"
+//        var shareParames = NSMutableDictionary()
+//        
+//        shareParames.SSDKSetupShareParamsByText(movie?.description,
+//            images : image.image,
+//            url : NSURL(string: url),
+//            title : movie?.title,
+//            type : SSDKContentType.Auto)
+//        
+//        //2.进行分享
+//        ShareSDK.showShareActionSheet(self.view,
+//            items: nil,
+//            shareParams: shareParames) { (
+//                state : SSDKResponseState,
+//                platformType : SSDKPlatformType,
+//                userdata : [NSObject : AnyObject]!,
+//                contentEnity : SSDKContentEntity!,
+//                error : NSError!, Bool end) -> Void in
+//            
+//            switch state{
+//                
+//            case SSDKResponseState.Success: println("分享成功")
+//            case SSDKResponseState.Fail:    println("分享失败,错误描述:\(error)")
+//            case SSDKResponseState.Cancel:  println("分享取消")
+//                
+//            default:
+//                break
+//            }
+//        }
+//
+////        ShareSDK.share(SSDKPlatformType.TypeSinaWeibo, parameters: shareParames) { (state : SSDKResponseState, userData : [NSObject : AnyObject]!, contentEntity :SSDKContentEntity!, error : NSError!) -> Void in
+////            
+////            switch state{
+////                
+////            case SSDKResponseState.Success:
+////                println("分享成功")
+////                let alert = UIAlertView(title: "分享成功", message: "分享成功", delegate: self, cancelButtonTitle: "取消")
+////                alert.show()
+////            case SSDKResponseState.Fail:    println("分享失败,错误描述:\(error)")
+////            case SSDKResponseState.Cancel:  println("分享取消")
+////                
+////            default:
+////                break
+////            }
+////        }
+//    }
     
 
     override func didReceiveMemoryWarning() {
