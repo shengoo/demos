@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "UMSocial.h"
+#import <UMShare/UMShare.h>
 
 @interface AppDelegate ()
 
@@ -18,24 +18,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [UMSocialData setAppKey:@"55b054cce0f55a08820008df"];
+
+//    [UMSocialData setAppKey:@"55b054cce0f55a08820008df"];
 //    [UMSocialWechatHandler setWXAppId:@"wx01f19da315b13687" appSecret:@"75144b5e0f9f19ed8c4ff7665e623c33" url:@"http://www.umeng.com/social"];
     
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
-    return  [UMSocialSnsService handleOpenURL:url];
-}
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    return  [UMSocialSnsService handleOpenURL:url];
-}
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+//{
+//    return  [UMSocialSnsService handleOpenURL:url];
+//}
+//- (BOOL)application:(UIApplication *)application
+//            openURL:(NSURL *)url
+//  sourceApplication:(NSString *)sourceApplication
+//         annotation:(id)annotation
+//{
+//    return  [UMSocialSnsService handleOpenURL:url];
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
